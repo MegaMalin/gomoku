@@ -12,6 +12,10 @@ success :
 
 * result : `{player:INT, key:STRING}`
 
+result :
+
+* Full : `403`
+
 ----------
 
 #### Returns the connection status for both players. A ame can only start when both players are connected
@@ -28,7 +32,7 @@ success :
 
 ----------
 
-#### Returns the map as a double array ordered this way : map[y][x] containing:
+#### Returns the map as a double array ordered this way : `map[y][x]` containing:
 
 ```
 0 => No stone
@@ -45,7 +49,7 @@ success :
 
 * code : `200`
 
-* result : `[[0, 1, ...], [2, 0, ...], ...]`
+* result : `{map: [[0, 1, ...], [2, 0, ...], ...]}`
 
 
 ----------
@@ -64,7 +68,7 @@ success :
 
 ----------
 
-Make a move. Needs the API key of the player in order to succeed.
+Makes a move. Needs the API key of the player in order to succeed.
 Also need the position where to play
 
 
@@ -74,7 +78,7 @@ args :
 
 * key : STRING
 
-* position : `{x: INT, y: INT}`
+* position : `{"x": INT, "y": INT}`
 
 success :
 
@@ -84,7 +88,7 @@ success :
 
 failure :
 
-* No key : 401
+* Bad key : `401`
 
 * Bad move : 403 : `{error: STRING}`
 
@@ -110,7 +114,7 @@ success :
 
 failure :
 
-* No key : 401
+* Bad key : 401
 
 * The game did not start : 403
 

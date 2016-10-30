@@ -1,0 +1,24 @@
+{
+  "name": "gomoku",
+  "version": "1.0.0",
+  "description": "A gomoku web server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4rzael/gomoku.git"
+  },
+  "author": "maxime.agor23@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/4rzael/gomoku/issues"
+  },
+  "homepage": "https://github.com/4rzael/gomoku#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "optimist": "^0.6.1"
+  }
+}
