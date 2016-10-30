@@ -84,9 +84,9 @@ success :
 
 failure :
 
-* No key : 401
+* No key : `401`
 
-* Bad move : 403 : `{error: STRING}`
+* Bad move : `403` : `{error: STRING}`
 
 
 ----------
@@ -110,9 +110,9 @@ success :
 
 failure :
 
-* No key : 401
+* No key : `401`
 
-* The game did not start : 403
+* The game did not start : `403`
 
 
 ----------
@@ -134,4 +134,4 @@ success :
 
 failure :
 
-* No key : 401
+* No key : `401`
