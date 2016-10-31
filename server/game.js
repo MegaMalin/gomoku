@@ -61,10 +61,49 @@ function Game () {
 				self.map[y][x] = player
 				++self.turn
 				self.emit('turn', self.getTurn())
-				resolve({win: false})
+				resolve(self.checkWin(x, y, player))
 			}
 		})
 	}
+
+	self.checkValidMove = function () {
+		return true;
+	};
+
+	self.checkWin = function (x, y, player) {
+		if (self.checkWinHorizontal(x, y, player) === 3)
+			return {win: true};
+		else if (self.checkWinVertical(x, y, player) === 3)
+			return {win: true};
+		// TODO: add diagonal check functions
+		return {win: false};
+	};
+
+	self.checkWinHorizontal = function (x, y, player) {
+		var count = 0;
+		for (i = x - 1; i >= 0; i--) {
+			if (self.map[y][i] === player)
+				++count;
+		}
+		for (i = x + 1 ; i <= 19; i++) {
+			if (self.map[y][i] === player)
+				++count;
+		}
+		return count;
+	};
+
+	self.checkWinVertical = function () {
+		var count = 0;
+		for (i = y - 1; i >= 0; i--) {
+			if (self.map[i][x] === player)
+				++count;
+		}
+		for (i = y + 1; i <= 19; i++) {
+			if (self.map[i][x] === player)
+				++count;
+		}
+		return count;
+	};
 }
 
 util.inherits(Game, EventEmitter);
