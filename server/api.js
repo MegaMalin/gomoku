@@ -92,6 +92,10 @@ function api (app, game) {
 		game.once('ready', () => {
 			res.status(200).send()
 		})
+
+		if (game;isReady()) {
+			res.status(200).send();
+		}
 	})
 
 	self._getPlayerFromKey = function(key) {
