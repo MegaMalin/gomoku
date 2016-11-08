@@ -18,22 +18,6 @@ failure :
 
 ----------
 
-#### Returns the player linked to the key
-
-**POST /key**
-
-success :
-
-* code : `200`
-
-* result : `{player:INT}`
-
-failure :
-
-* bad key : `403` : {error: STRING}
-
-----------
-
 #### Returns the connection status for both players. A ame can only start when both players are connected
 
 
