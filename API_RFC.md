@@ -12,9 +12,25 @@ success :
 
 * result : `{player:INT, key:STRING}`
 
-result :
+failure :
 
 * Full : `403`
+
+----------
+
+#### Returns the player linked to the key
+
+**POST /key**
+
+success :
+
+* code : `200`
+
+* result : `{player:INT}`
+
+failure :
+
+* bad key : `403` : {error: STRING}
 
 ----------
 
@@ -84,7 +100,7 @@ success :
 
 * code : `200`
 
-* result : `{win: BOOLEAN}`
+* result : `{win: BOOLEAN, taken: [{x: INT, y: INT}, ...]}`
 
 failure :
 

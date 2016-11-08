@@ -2,6 +2,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var formidable = require('express-formidable');
 
 var argv = require('optimist').argv
 
@@ -9,6 +10,7 @@ var Api = require('./api')
 var Game = require('./game')
 
 var app = express();
+app.use(formidable()); // support form-data encoded bodies
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
@@ -23,3 +25,5 @@ if (argv.p && argv.p == argv.p % 0xFFFF)
 app.listen(listenPort, function () {
   console.log('Example app listening on port', listenPort);
 });
+
+module.exports = app;
