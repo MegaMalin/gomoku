@@ -181,7 +181,6 @@ describe('api', function () {
 			.get('/subscribe/turn')
 			.query({key: player1Key})
 			.end(function (err, res) {
-				console.log('ninja')
 				// expect(player2Played).to.equal(true);
 				done();
 			});
