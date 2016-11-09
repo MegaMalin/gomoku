@@ -8,15 +8,13 @@ var formidable = require('express-formidable');
 var argv = require('optimist').argv
 
 var Api = require('./api')
-var Game = require('./game')
 
 var app = express();
 app.use(formidable()); // support form-data encoded bodies
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-var game = new Game()
-var api = new Api(app, game)
+var api = new Api(app)
 
 var listenPort = 3000
 if (argv.p && argv.p == argv.p % 0xFFFF)

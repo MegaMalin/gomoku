@@ -264,5 +264,30 @@ describe('api', function () {
 			});
 		});
 	});
+
+	describe('/restart', function () {
+		it('should reset both the Game and the keys', function (done) {
+			request(app)
+			.get('/restart')
+			.query({key: player1Key})
+			.end(function (err, res) {
+				request(app)
+				.get('/connected')
+				.end(function (errConnected, resConnected) {
+					var tmpConnected = JSON.parse(resConnected.text);
+					expect(tmpConnected.player1).to.equal(false);
+					expect(tmpConnected.player2).to.equal(false);
+
+					request(app)
+					.get('/turn')
+					.end(function (errTurn, resTurn) {
+						var tmpTurn = JSON.parse(resTurn.text);
+						expect(tmpTurn.total).to.equal(1);
+						done(err);
+					});
+				});
+			});
+		});
+	});
 });
 

@@ -1,5 +1,7 @@
 'use strict';
 
+var Game = require('./game')
+
 function getRequestField(req, field) {
 	if (req.body && req.body[field] !== undefined)
 		return req.body[field];
@@ -13,7 +15,9 @@ function getRequestField(req, field) {
 	return undefined;
 }
 
-function api (app, game) {
+function api (app) {
+
+	var game = new Game()
 	var self = this;
 	self.keys = {};
 
@@ -32,6 +36,8 @@ function api (app, game) {
 	app.post('/subscribe/ready', api_subscribe_ready);
 	app.get('/subscribe/turn', api_subscribe_turn);
 	app.post('/subscribe/turn', api_subscribe_turn);
+	app.get('/restart', api_restart);
+	app.post('/restart', api_restart);
 
 
 	function api_root (req, res) {
@@ -111,7 +117,6 @@ function api (app, game) {
 				res.status(200).send(result);
 			})
 			.catch((error) => {
-				console.log(error);
 				res.status(403).send(error);
 			})			
 		}
@@ -162,6 +167,19 @@ function api (app, game) {
 		}
 		subscribe();
 
+	}
+
+	function api_restart(req, res) {
+		res.set('Cache-Control', 'no-cache, must-revalidate');
+		var key = getRequestField(req, 'key');
+
+		var player = self._getPlayerFromKey(key);
+		if (player !== 1 && player !== 2)
+			res.status(401).send();
+
+		game = new Game();
+		self.keys = {};
+		res.status(200).send({restarted: true})
 	}
 
 	self._getPlayerFromKey = function(key) {

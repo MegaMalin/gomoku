@@ -52,6 +52,10 @@ success :
 
 **GET /player_score**
 
+args :
+
+* key : STRING
+
 success :
 
 * code : `200`
@@ -128,7 +132,8 @@ failure :
 
 ----------
 
-HTTP long polling request:
+##### HTTP long polling request
+
 Will be resolved when it is the player's turn to play
 Needs the API key of the player in order to succeed.
 
@@ -154,7 +159,8 @@ failure :
 
 ----------
 
-HTTP long polling request:
+##### HTTP long polling request
+
 Will be resolved when the game is ready
 Needs the API key of the player in order to succeed.
 
@@ -172,3 +178,29 @@ success :
 failure :
 
 * No key : `401`
+
+----------
+
+#### Asks to restart the game. If both players ask within a 10 seconds time range, the game restarts
+
+##### WARNING : If the game restart, both players are ejected from the game and need to reconnect
+
+##### HTTP long polling request
+
+Will be resolved when the other player accepted, or after a timeout of 10s
+
+**GET (or POST) /restart**
+
+args :
+
+* key : STRING
+
+success :
+
+* code : `200`
+
+* result : `{restarted: BOOLEAN}`
+
+failure :
+
+* Bad key : `401`
