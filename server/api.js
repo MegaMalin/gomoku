@@ -1,3 +1,5 @@
+'use strict';
+
 function getRequestField(req, field) {
 	if (req.body && req.body[field] !== undefined)
 		return req.body[field];
@@ -85,6 +87,7 @@ function api (app, game) {
 				res.status(200).send(result);
 			})
 			.catch((error) => {
+				console.log(error);
 				res.status(403).send(error);
 			})			
 		}
@@ -136,7 +139,6 @@ function api (app, game) {
 		subscribe();
 
 	}
-
 
 	self._getPlayerFromKey = function(key) {
 		return self.keys[key];
