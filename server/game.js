@@ -47,8 +47,11 @@ function Game () {
 	};
 
 	self.getScore = function getScore() {
-		return self.score;
-	}
+		return {
+			player1: self.score[1],
+			player2: self.score[2]
+		};
+	};
 
 	// async, because leo's functions could use some async functionalities
 	self.play = function play(x, y, player) {

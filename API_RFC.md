@@ -32,6 +32,21 @@ success :
 
 ----------
 
+#### Returns the score for both players. A player wins when it gets to 10
+
+
+**GET /score**
+
+success :
+
+* code : `200`
+
+* result : `{player1: INT, player2: INT}`
+
+
+----------
+
+
 #### Returns the map as a double array ordered this way : `map[y][x]` containing:
 
 ```

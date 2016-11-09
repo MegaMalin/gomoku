@@ -26,6 +26,7 @@ function api (app, game) {
 	app.get('/turn', api_turn);
 	app.get('/play', api_play);
 	app.post('/play', api_play);
+	app.get('/score', api_score);
 	app.get('/subscribe/ready', api_subscribe_ready);
 	app.post('/subscribe/ready', api_subscribe_ready);
 	app.get('/subscribe/turn', api_subscribe_turn);
@@ -66,6 +67,10 @@ function api (app, game) {
 
 	function api_turn (req, res) {
 		res.status(200).send(game.getTurn());
+	}
+
+	function api_score (req, res) {
+		res.status(200).send(game.getScore());
 	}
 
 	function api_play (req, res) {
