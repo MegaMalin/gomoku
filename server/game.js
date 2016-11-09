@@ -61,7 +61,7 @@ function Game () {
 				self.map[y][x] = player
 				++self.turn
 				self.emit('turn', self.getTurn())
-				resolve({win: false})
+				resolve({win: false, taken:[]})
 			}
 		})
 	}

@@ -18,7 +18,7 @@ failure :
 
 ----------
 
-#### Returns the connection status for both players. A ame can only start when both players are connected
+#### Returns the connection status for both players. A game can only start when both players are connected
 
 
 **GET /connected**
@@ -72,7 +72,7 @@ Makes a move. Needs the API key of the player in order to succeed.
 Also need the position where to play
 
 
-**POST /play**
+**POST (or GET) /play**
 
 args :
 
@@ -100,7 +100,7 @@ Will be resolved when it is the player's turn to play
 Needs the API key of the player in order to succeed.
 
 
-**GET /subscribe/turn**
+**GET (or POST) /subscribe/turn**
 
 args :
 
@@ -126,7 +126,7 @@ Will be resolved when the game is ready
 Needs the API key of the player in order to succeed.
 
 
-**GET /subscribe/ready**
+**GET (or POST) /subscribe/ready**
 
 args :
 

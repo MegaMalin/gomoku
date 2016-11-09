@@ -85,7 +85,7 @@ describe('api', function () {
 			.query({key: player1Key})
 			.end(function (err, res) {
 				expect(player2connected).to.equal(true);
-				done(err);
+				done();
 			});
 
 			setTimeout(() => {
