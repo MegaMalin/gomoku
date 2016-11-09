@@ -18,7 +18,7 @@ failure :
 
 ----------
 
-#### Returns the connection status for both players. A ame can only start when both players are connected
+#### Returns the connection status for both players. A game can only start when both players are connected
 
 
 **GET /connected**
