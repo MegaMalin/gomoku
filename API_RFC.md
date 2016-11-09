@@ -32,10 +32,11 @@ success :
 
 ----------
 
+
 #### Returns the score for both players. A player wins when it gets to 10
 
 
-**GET /score**
+**GET /scores**
 
 success :
 
@@ -43,6 +44,23 @@ success :
 
 * result : `{player1: INT, player2: INT}`
 
+
+----------
+
+#### Returns the score for the given player. A player wins when it gets to 10
+
+
+**GET /player_score**
+
+success :
+
+* code : `200`
+
+* result : `{score: INT}`
+
+failure :
+
+* Bad key : `401`
 
 ----------
 

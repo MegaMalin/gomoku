@@ -219,7 +219,6 @@ describe('api', function () {
 				var objRes = JSON.parse(res.text);
 				expect(objRes).to.have.property('map');
 
-
 				expect(objRes.map.length).to.equal(19);
 				objRes.map.forEach((row) => {
 					expect(row.length).to.equal(19);
@@ -228,6 +227,39 @@ describe('api', function () {
 				expect(objRes.map[3][3]).to.equal(1);
 				expect(objRes.map[4][4]).to.equal(2);
 
+				done(err);
+			});
+		});
+	});
+
+	describe('/player_score', function () {
+		it('should return the score for a player', function (done) {
+			request(app)
+			.get('/player_score')
+			.query({key: player1Key})
+			.end(function (err, res) {
+				expect(res.status).to.equal(200);
+				expect(res).to.have.property('text');
+				var objRes = JSON.parse(res.text);
+				expect(objRes).to.have.property('score');
+				expect(objRes.score).to.equal(0);
+				done(err);
+			});
+		});
+	});
+
+	describe('/scores', function () {
+		it('should return scores', function (done) {
+			request(app)
+			.get('/scores')
+			.end(function (err, res) {
+				expect(res.status).to.equal(200);
+				expect(res).to.have.property('text');
+				var objRes = JSON.parse(res.text);
+				expect(objRes).to.have.property('player1');
+				expect(objRes).to.have.property('player2');
+				expect(objRes.player1).to.equal(0);
+				expect(objRes.player2).to.equal(0);
 				done(err);
 			});
 		});

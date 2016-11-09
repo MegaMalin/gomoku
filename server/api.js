@@ -26,7 +26,8 @@ function api (app, game) {
 	app.get('/turn', api_turn);
 	app.get('/play', api_play);
 	app.post('/play', api_play);
-	app.get('/score', api_score);
+	app.get('/scores', api_score);
+	app.get('/player_score', api_player_score);
 	app.get('/subscribe/ready', api_subscribe_ready);
 	app.post('/subscribe/ready', api_subscribe_ready);
 	app.get('/subscribe/turn', api_subscribe_turn);
@@ -72,6 +73,24 @@ function api (app, game) {
 	function api_score (req, res) {
 		res.status(200).send(game.getScore());
 	}
+
+	function api_player_score (req, res) {
+		var key = getRequestField(req, 'key');
+
+		if (!key)
+			res.status(401).send({error: 'Bad player'});
+		else {
+			var player = self._getPlayerFromKey(key);
+			if (player !== 1 && player !== 2)
+				res.status(401).send({error: 'Bad player'});
+			else {
+				res.status(200).send({
+					score: game.getScore()[['player1', 'player2'][player - 1]]
+				});
+			}
+		}
+	}
+
 
 	function api_play (req, res) {
 		var key = getRequestField(req, 'key');
