@@ -1,0 +1,1006 @@
+fileFormatVersion: 2
+guid: 66fd28039b6436c4182d8733911baaeb
+timeCreated: 1477906250
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b9010000ba010000bb010000bc010000bd010000be010000bf010000c0010000c1010000c2010000c3010000c4010000c5010000
+  assetHash:
+    serializedVersion: 2
+    Hash: c83ceb6600c10a26fa92851caaf337d9
+  longitude: 12.49236
+  latitude: 41.890191
+  northCorrection: 358.32476524607324
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.49095955, y: 1.9244505, z: -0.8169621}
+      lookAt: {x: 0.5033061, y: -0.7746057, z: 1.3716164}
+      up: {x: 0.004381735, y: 0.6298349, z: 0.77671677}
+      fov: 21.989943
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bowl_b
+    100002: bowl_w
+    100004: carpet
+    100006: //RootNode
+    100008: go_ban
+    100010: Go_scene
+    100012: Group#15
+    100014: Group#18
+    100016: Legs
+    100018: Legs 1
+    100020: Legs 2
+    100022: Legs 3
+    100024: lines
+    100026: lit_b
+    100028: lit_w
+    100030: stone_b
+    100032: stone_b 1
+    100034: stone_b 10
+    100036: stone_b 100
+    100038: stone_b 101
+    100040: stone_b 102
+    100042: stone_b 103
+    100044: stone_b 104
+    100046: stone_b 11
+    100048: stone_b 12
+    100050: stone_b 13
+    100052: stone_b 14
+    100054: stone_b 15
+    100056: stone_b 16
+    100058: stone_b 17
+    100060: stone_b 18
+    100062: stone_b 19
+    100064: stone_b 2
+    100066: stone_b 20
+    100068: stone_b 21
+    100070: stone_b 22
+    100072: stone_b 23
+    100074: stone_b 24
+    100076: stone_b 25
+    100078: stone_b 26
+    100080: stone_b 27
+    100082: stone_b 28
+    100084: stone_b 29
+    100086: stone_b 3
+    100088: stone_b 30
+    100090: stone_b 31
+    100092: stone_b 32
+    100094: stone_b 33
+    100096: stone_b 34
+    100098: stone_b 35
+    100100: stone_b 36
+    100102: stone_b 37
+    100104: stone_b 38
+    100106: stone_b 39
+    100108: stone_b 4
+    100110: stone_b 40
+    100112: stone_b 41
+    100114: stone_b 42
+    100116: stone_b 43
+    100118: stone_b 44
+    100120: stone_b 45
+    100122: stone_b 46
+    100124: stone_b 47
+    100126: stone_b 48
+    100128: stone_b 49
+    100130: stone_b 5
+    100132: stone_b 50
+    100134: stone_b 51
+    100136: stone_b 52
+    100138: stone_b 53
+    100140: stone_b 54
+    100142: stone_b 55
+    100144: stone_b 56
+    100146: stone_b 57
+    100148: stone_b 58
+    100150: stone_b 59
+    100152: stone_b 6
+    100154: stone_b 60
+    100156: stone_b 61
+    100158: stone_b 62
+    100160: stone_b 63
+    100162: stone_b 64
+    100164: stone_b 65
+    100166: stone_b 66
+    100168: stone_b 67
+    100170: stone_b 68
+    100172: stone_b 69
+    100174: stone_b 7
+    100176: stone_b 70
+    100178: stone_b 71
+    100180: stone_b 72
+    100182: stone_b 73
+    100184: stone_b 74
+    100186: stone_b 75
+    100188: stone_b 76
+    100190: stone_b 77
+    100192: stone_b 78
+    100194: stone_b 79
+    100196: stone_b 8
+    100198: stone_b 80
+    100200: stone_b 81
+    100202: stone_b 82
+    100204: stone_b 83
+    100206: stone_b 84
+    100208: stone_b 85
+    100210: stone_b 86
+    100212: stone_b 87
+    100214: stone_b 88
+    100216: stone_b 89
+    100218: stone_b 9
+    100220: stone_b 90
+    100222: stone_b 91
+    100224: stone_b 92
+    100226: stone_b 93
+    100228: stone_b 94
+    100230: stone_b 95
+    100232: stone_b 96
+    100234: stone_b 97
+    100236: stone_b 98
+    100238: stone_b 99
+    100240: stone_w
+    100242: stone_w 1
+    100244: stone_w 10
+    100246: stone_w 100
+    100248: stone_w 101
+    100250: stone_w 102
+    100252: stone_w 103
+    100254: stone_w 104
+    100256: stone_w 105
+    100258: stone_w 106
+    100260: stone_w 107
+    100262: stone_w 11
+    100264: stone_w 12
+    100266: stone_w 13
+    100268: stone_w 14
+    100270: stone_w 15
+    100272: stone_w 16
+    100274: stone_w 17
+    100276: stone_w 18
+    100278: stone_w 19
+    100280: stone_w 2
+    100282: stone_w 20
+    100284: stone_w 21
+    100286: stone_w 22
+    100288: stone_w 23
+    100290: stone_w 24
+    100292: stone_w 25
+    100294: stone_w 26
+    100296: stone_w 27
+    100298: stone_w 28
+    100300: stone_w 29
+    100302: stone_w 3
+    100304: stone_w 30
+    100306: stone_w 31
+    100308: stone_w 32
+    100310: stone_w 33
+    100312: stone_w 34
+    100314: stone_w 35
+    100316: stone_w 36
+    100318: stone_w 37
+    100320: stone_w 38
+    100322: stone_w 39
+    100324: stone_w 4
+    100326: stone_w 40
+    100328: stone_w 41
+    100330: stone_w 42
+    100332: stone_w 43
+    100334: stone_w 44
+    100336: stone_w 45
+    100338: stone_w 46
+    100340: stone_w 47
+    100342: stone_w 48
+    100344: stone_w 49
+    100346: stone_w 5
+    100348: stone_w 50
+    100350: stone_w 51
+    100352: stone_w 52
+    100354: stone_w 53
+    100356: stone_w 54
+    100358: stone_w 55
+    100360: stone_w 56
+    100362: stone_w 57
+    100364: stone_w 58
+    100366: stone_w 59
+    100368: stone_w 6
+    100370: stone_w 60
+    100372: stone_w 61
+    100374: stone_w 62
+    100376: stone_w 63
+    100378: stone_w 64
+    100380: stone_w 65
+    100382: stone_w 66
+    100384: stone_w 67
+    100386: stone_w 68
+    100388: stone_w 69
+    100390: stone_w 7
+    100392: stone_w 70
+    100394: stone_w 71
+    100396: stone_w 72
+    100398: stone_w 73
+    100400: stone_w 74
+    100402: stone_w 75
+    100404: stone_w 76
+    100406: stone_w 77
+    100408: stone_w 78
+    100410: stone_w 79
+    100412: stone_w 8
+    100414: stone_w 80
+    100416: stone_w 81
+    100418: stone_w 82
+    100420: stone_w 83
+    100422: stone_w 84
+    100424: stone_w 85
+    100426: stone_w 86
+    100428: stone_w 87
+    100430: stone_w 88
+    100432: stone_w 89
+    100434: stone_w 9
+    100436: stone_w 90
+    100438: stone_w 91
+    100440: stone_w 92
+    100442: stone_w 93
+    100444: stone_w 94
+    100446: stone_w 95
+    100448: stone_w 96
+    100450: stone_w 97
+    100452: stone_w 98
+    100454: stone_w 99
+    100456: stones_board
+    100458: stones_bowl
+    100460: stones_captured
+    400000: bowl_b
+    400002: bowl_w
+    400004: carpet
+    400006: //RootNode
+    400008: go_ban
+    400010: Go_scene
+    400012: Group#15
+    400014: Group#18
+    400016: Legs
+    400018: Legs 1
+    400020: Legs 2
+    400022: Legs 3
+    400024: lines
+    400026: lit_b
+    400028: lit_w
+    400030: stone_b
+    400032: stone_b 1
+    400034: stone_b 10
+    400036: stone_b 100
+    400038: stone_b 101
+    400040: stone_b 102
+    400042: stone_b 103
+    400044: stone_b 104
+    400046: stone_b 11
+    400048: stone_b 12
+    400050: stone_b 13
+    400052: stone_b 14
+    400054: stone_b 15
+    400056: stone_b 16
+    400058: stone_b 17
+    400060: stone_b 18
+    400062: stone_b 19
+    400064: stone_b 2
+    400066: stone_b 20
+    400068: stone_b 21
+    400070: stone_b 22
+    400072: stone_b 23
+    400074: stone_b 24
+    400076: stone_b 25
+    400078: stone_b 26
+    400080: stone_b 27
+    400082: stone_b 28
+    400084: stone_b 29
+    400086: stone_b 3
+    400088: stone_b 30
+    400090: stone_b 31
+    400092: stone_b 32
+    400094: stone_b 33
+    400096: stone_b 34
+    400098: stone_b 35
+    400100: stone_b 36
+    400102: stone_b 37
+    400104: stone_b 38
+    400106: stone_b 39
+    400108: stone_b 4
+    400110: stone_b 40
+    400112: stone_b 41
+    400114: stone_b 42
+    400116: stone_b 43
+    400118: stone_b 44
+    400120: stone_b 45
+    400122: stone_b 46
+    400124: stone_b 47
+    400126: stone_b 48
+    400128: stone_b 49
+    400130: stone_b 5
+    400132: stone_b 50
+    400134: stone_b 51
+    400136: stone_b 52
+    400138: stone_b 53
+    400140: stone_b 54
+    400142: stone_b 55
+    400144: stone_b 56
+    400146: stone_b 57
+    400148: stone_b 58
+    400150: stone_b 59
+    400152: stone_b 6
+    400154: stone_b 60
+    400156: stone_b 61
+    400158: stone_b 62
+    400160: stone_b 63
+    400162: stone_b 64
+    400164: stone_b 65
+    400166: stone_b 66
+    400168: stone_b 67
+    400170: stone_b 68
+    400172: stone_b 69
+    400174: stone_b 7
+    400176: stone_b 70
+    400178: stone_b 71
+    400180: stone_b 72
+    400182: stone_b 73
+    400184: stone_b 74
+    400186: stone_b 75
+    400188: stone_b 76
+    400190: stone_b 77
+    400192: stone_b 78
+    400194: stone_b 79
+    400196: stone_b 8
+    400198: stone_b 80
+    400200: stone_b 81
+    400202: stone_b 82
+    400204: stone_b 83
+    400206: stone_b 84
+    400208: stone_b 85
+    400210: stone_b 86
+    400212: stone_b 87
+    400214: stone_b 88
+    400216: stone_b 89
+    400218: stone_b 9
+    400220: stone_b 90
+    400222: stone_b 91
+    400224: stone_b 92
+    400226: stone_b 93
+    400228: stone_b 94
+    400230: stone_b 95
+    400232: stone_b 96
+    400234: stone_b 97
+    400236: stone_b 98
+    400238: stone_b 99
+    400240: stone_w
+    400242: stone_w 1
+    400244: stone_w 10
+    400246: stone_w 100
+    400248: stone_w 101
+    400250: stone_w 102
+    400252: stone_w 103
+    400254: stone_w 104
+    400256: stone_w 105
+    400258: stone_w 106
+    400260: stone_w 107
+    400262: stone_w 11
+    400264: stone_w 12
+    400266: stone_w 13
+    400268: stone_w 14
+    400270: stone_w 15
+    400272: stone_w 16
+    400274: stone_w 17
+    400276: stone_w 18
+    400278: stone_w 19
+    400280: stone_w 2
+    400282: stone_w 20
+    400284: stone_w 21
+    400286: stone_w 22
+    400288: stone_w 23
+    400290: stone_w 24
+    400292: stone_w 25
+    400294: stone_w 26
+    400296: stone_w 27
+    400298: stone_w 28
+    400300: stone_w 29
+    400302: stone_w 3
+    400304: stone_w 30
+    400306: stone_w 31
+    400308: stone_w 32
+    400310: stone_w 33
+    400312: stone_w 34
+    400314: stone_w 35
+    400316: stone_w 36
+    400318: stone_w 37
+    400320: stone_w 38
+    400322: stone_w 39
+    400324: stone_w 4
+    400326: stone_w 40
+    400328: stone_w 41
+    400330: stone_w 42
+    400332: stone_w 43
+    400334: stone_w 44
+    400336: stone_w 45
+    400338: stone_w 46
+    400340: stone_w 47
+    400342: stone_w 48
+    400344: stone_w 49
+    400346: stone_w 5
+    400348: stone_w 50
+    400350: stone_w 51
+    400352: stone_w 52
+    400354: stone_w 53
+    400356: stone_w 54
+    400358: stone_w 55
+    400360: stone_w 56
+    400362: stone_w 57
+    400364: stone_w 58
+    400366: stone_w 59
+    400368: stone_w 6
+    400370: stone_w 60
+    400372: stone_w 61
+    400374: stone_w 62
+    400376: stone_w 63
+    400378: stone_w 64
+    400380: stone_w 65
+    400382: stone_w 66
+    400384: stone_w 67
+    400386: stone_w 68
+    400388: stone_w 69
+    400390: stone_w 7
+    400392: stone_w 70
+    400394: stone_w 71
+    400396: stone_w 72
+    400398: stone_w 73
+    400400: stone_w 74
+    400402: stone_w 75
+    400404: stone_w 76
+    400406: stone_w 77
+    400408: stone_w 78
+    400410: stone_w 79
+    400412: stone_w 8
+    400414: stone_w 80
+    400416: stone_w 81
+    400418: stone_w 82
+    400420: stone_w 83
+    400422: stone_w 84
+    400424: stone_w 85
+    400426: stone_w 86
+    400428: stone_w 87
+    400430: stone_w 88
+    400432: stone_w 89
+    400434: stone_w 9
+    400436: stone_w 90
+    400438: stone_w 91
+    400440: stone_w 92
+    400442: stone_w 93
+    400444: stone_w 94
+    400446: stone_w 95
+    400448: stone_w 96
+    400450: stone_w 97
+    400452: stone_w 98
+    400454: stone_w 99
+    400456: stones_board
+    400458: stones_bowl
+    400460: stones_captured
+    2300000: bowl_b
+    2300002: bowl_w
+    2300004: carpet
+    2300006: go_ban
+    2300008: Legs
+    2300010: Legs 1
+    2300012: Legs 2
+    2300014: Legs 3
+    2300016: lit_b
+    2300018: lit_w
+    2300020: stone_b
+    2300022: stone_b 1
+    2300024: stone_b 10
+    2300026: stone_b 100
+    2300028: stone_b 101
+    2300030: stone_b 102
+    2300032: stone_b 103
+    2300034: stone_b 104
+    2300036: stone_b 11
+    2300038: stone_b 12
+    2300040: stone_b 13
+    2300042: stone_b 14
+    2300044: stone_b 15
+    2300046: stone_b 16
+    2300048: stone_b 17
+    2300050: stone_b 18
+    2300052: stone_b 19
+    2300054: stone_b 2
+    2300056: stone_b 20
+    2300058: stone_b 21
+    2300060: stone_b 22
+    2300062: stone_b 23
+    2300064: stone_b 24
+    2300066: stone_b 25
+    2300068: stone_b 26
+    2300070: stone_b 27
+    2300072: stone_b 28
+    2300074: stone_b 29
+    2300076: stone_b 3
+    2300078: stone_b 30
+    2300080: stone_b 31
+    2300082: stone_b 32
+    2300084: stone_b 33
+    2300086: stone_b 34
+    2300088: stone_b 35
+    2300090: stone_b 36
+    2300092: stone_b 37
+    2300094: stone_b 38
+    2300096: stone_b 39
+    2300098: stone_b 4
+    2300100: stone_b 40
+    2300102: stone_b 41
+    2300104: stone_b 42
+    2300106: stone_b 43
+    2300108: stone_b 44
+    2300110: stone_b 45
+    2300112: stone_b 46
+    2300114: stone_b 47
+    2300116: stone_b 48
+    2300118: stone_b 49
+    2300120: stone_b 5
+    2300122: stone_b 50
+    2300124: stone_b 51
+    2300126: stone_b 52
+    2300128: stone_b 53
+    2300130: stone_b 54
+    2300132: stone_b 55
+    2300134: stone_b 56
+    2300136: stone_b 57
+    2300138: stone_b 58
+    2300140: stone_b 59
+    2300142: stone_b 6
+    2300144: stone_b 60
+    2300146: stone_b 61
+    2300148: stone_b 62
+    2300150: stone_b 63
+    2300152: stone_b 64
+    2300154: stone_b 65
+    2300156: stone_b 66
+    2300158: stone_b 67
+    2300160: stone_b 68
+    2300162: stone_b 69
+    2300164: stone_b 7
+    2300166: stone_b 70
+    2300168: stone_b 71
+    2300170: stone_b 72
+    2300172: stone_b 73
+    2300174: stone_b 74
+    2300176: stone_b 75
+    2300178: stone_b 76
+    2300180: stone_b 77
+    2300182: stone_b 78
+    2300184: stone_b 79
+    2300186: stone_b 8
+    2300188: stone_b 80
+    2300190: stone_b 81
+    2300192: stone_b 82
+    2300194: stone_b 83
+    2300196: stone_b 84
+    2300198: stone_b 85
+    2300200: stone_b 86
+    2300202: stone_b 87
+    2300204: stone_b 88
+    2300206: stone_b 89
+    2300208: stone_b 9
+    2300210: stone_b 90
+    2300212: stone_b 91
+    2300214: stone_b 92
+    2300216: stone_b 93
+    2300218: stone_b 94
+    2300220: stone_b 95
+    2300222: stone_b 96
+    2300224: stone_b 97
+    2300226: stone_b 98
+    2300228: stone_b 99
+    2300230: stone_w
+    2300232: stone_w 1
+    2300234: stone_w 10
+    2300236: stone_w 100
+    2300238: stone_w 101
+    2300240: stone_w 102
+    2300242: stone_w 103
+    2300244: stone_w 104
+    2300246: stone_w 105
+    2300248: stone_w 106
+    2300250: stone_w 107
+    2300252: stone_w 11
+    2300254: stone_w 12
+    2300256: stone_w 13
+    2300258: stone_w 14
+    2300260: stone_w 15
+    2300262: stone_w 16
+    2300264: stone_w 17
+    2300266: stone_w 18
+    2300268: stone_w 19
+    2300270: stone_w 2
+    2300272: stone_w 20
+    2300274: stone_w 21
+    2300276: stone_w 22
+    2300278: stone_w 23
+    2300280: stone_w 24
+    2300282: stone_w 25
+    2300284: stone_w 26
+    2300286: stone_w 27
+    2300288: stone_w 28
+    2300290: stone_w 29
+    2300292: stone_w 3
+    2300294: stone_w 30
+    2300296: stone_w 31
+    2300298: stone_w 32
+    2300300: stone_w 33
+    2300302: stone_w 34
+    2300304: stone_w 35
+    2300306: stone_w 36
+    2300308: stone_w 37
+    2300310: stone_w 38
+    2300312: stone_w 39
+    2300314: stone_w 4
+    2300316: stone_w 40
+    2300318: stone_w 41
+    2300320: stone_w 42
+    2300322: stone_w 43
+    2300324: stone_w 44
+    2300326: stone_w 45
+    2300328: stone_w 46
+    2300330: stone_w 47
+    2300332: stone_w 48
+    2300334: stone_w 49
+    2300336: stone_w 5
+    2300338: stone_w 50
+    2300340: stone_w 51
+    2300342: stone_w 52
+    2300344: stone_w 53
+    2300346: stone_w 54
+    2300348: stone_w 55
+    2300350: stone_w 56
+    2300352: stone_w 57
+    2300354: stone_w 58
+    2300356: stone_w 59
+    2300358: stone_w 6
+    2300360: stone_w 60
+    2300362: stone_w 61
+    2300364: stone_w 62
+    2300366: stone_w 63
+    2300368: stone_w 64
+    2300370: stone_w 65
+    2300372: stone_w 66
+    2300374: stone_w 67
+    2300376: stone_w 68
+    2300378: stone_w 69
+    2300380: stone_w 7
+    2300382: stone_w 70
+    2300384: stone_w 71
+    2300386: stone_w 72
+    2300388: stone_w 73
+    2300390: stone_w 74
+    2300392: stone_w 75
+    2300394: stone_w 76
+    2300396: stone_w 77
+    2300398: stone_w 78
+    2300400: stone_w 79
+    2300402: stone_w 8
+    2300404: stone_w 80
+    2300406: stone_w 81
+    2300408: stone_w 82
+    2300410: stone_w 83
+    2300412: stone_w 84
+    2300414: stone_w 85
+    2300416: stone_w 86
+    2300418: stone_w 87
+    2300420: stone_w 88
+    2300422: stone_w 89
+    2300424: stone_w 9
+    2300426: stone_w 90
+    2300428: stone_w 91
+    2300430: stone_w 92
+    2300432: stone_w 93
+    2300434: stone_w 94
+    2300436: stone_w 95
+    2300438: stone_w 96
+    2300440: stone_w 97
+    2300442: stone_w 98
+    2300444: stone_w 99
+    3300000: bowl_b
+    3300002: bowl_w
+    3300004: carpet
+    3300006: go_ban
+    3300008: Legs
+    3300010: Legs 1
+    3300012: Legs 2
+    3300014: Legs 3
+    3300016: lit_b
+    3300018: lit_w
+    3300020: stone_b
+    3300022: stone_b 1
+    3300024: stone_b 10
+    3300026: stone_b 100
+    3300028: stone_b 101
+    3300030: stone_b 102
+    3300032: stone_b 103
+    3300034: stone_b 104
+    3300036: stone_b 11
+    3300038: stone_b 12
+    3300040: stone_b 13
+    3300042: stone_b 14
+    3300044: stone_b 15
+    3300046: stone_b 16
+    3300048: stone_b 17
+    3300050: stone_b 18
+    3300052: stone_b 19
+    3300054: stone_b 2
+    3300056: stone_b 20
+    3300058: stone_b 21
+    3300060: stone_b 22
+    3300062: stone_b 23
+    3300064: stone_b 24
+    3300066: stone_b 25
+    3300068: stone_b 26
+    3300070: stone_b 27
+    3300072: stone_b 28
+    3300074: stone_b 29
+    3300076: stone_b 3
+    3300078: stone_b 30
+    3300080: stone_b 31
+    3300082: stone_b 32
+    3300084: stone_b 33
+    3300086: stone_b 34
+    3300088: stone_b 35
+    3300090: stone_b 36
+    3300092: stone_b 37
+    3300094: stone_b 38
+    3300096: stone_b 39
+    3300098: stone_b 4
+    3300100: stone_b 40
+    3300102: stone_b 41
+    3300104: stone_b 42
+    3300106: stone_b 43
+    3300108: stone_b 44
+    3300110: stone_b 45
+    3300112: stone_b 46
+    3300114: stone_b 47
+    3300116: stone_b 48
+    3300118: stone_b 49
+    3300120: stone_b 5
+    3300122: stone_b 50
+    3300124: stone_b 51
+    3300126: stone_b 52
+    3300128: stone_b 53
+    3300130: stone_b 54
+    3300132: stone_b 55
+    3300134: stone_b 56
+    3300136: stone_b 57
+    3300138: stone_b 58
+    3300140: stone_b 59
+    3300142: stone_b 6
+    3300144: stone_b 60
+    3300146: stone_b 61
+    3300148: stone_b 62
+    3300150: stone_b 63
+    3300152: stone_b 64
+    3300154: stone_b 65
+    3300156: stone_b 66
+    3300158: stone_b 67
+    3300160: stone_b 68
+    3300162: stone_b 69
+    3300164: stone_b 7
+    3300166: stone_b 70
+    3300168: stone_b 71
+    3300170: stone_b 72
+    3300172: stone_b 73
+    3300174: stone_b 74
+    3300176: stone_b 75
+    3300178: stone_b 76
+    3300180: stone_b 77
+    3300182: stone_b 78
+    3300184: stone_b 79
+    3300186: stone_b 8
+    3300188: stone_b 80
+    3300190: stone_b 81
+    3300192: stone_b 82
+    3300194: stone_b 83
+    3300196: stone_b 84
+    3300198: stone_b 85
+    3300200: stone_b 86
+    3300202: stone_b 87
+    3300204: stone_b 88
+    3300206: stone_b 89
+    3300208: stone_b 9
+    3300210: stone_b 90
+    3300212: stone_b 91
+    3300214: stone_b 92
+    3300216: stone_b 93
+    3300218: stone_b 94
+    3300220: stone_b 95
+    3300222: stone_b 96
+    3300224: stone_b 97
+    3300226: stone_b 98
+    3300228: stone_b 99
+    3300230: stone_w
+    3300232: stone_w 1
+    3300234: stone_w 10
+    3300236: stone_w 100
+    3300238: stone_w 101
+    3300240: stone_w 102
+    3300242: stone_w 103
+    3300244: stone_w 104
+    3300246: stone_w 105
+    3300248: stone_w 106
+    3300250: stone_w 107
+    3300252: stone_w 11
+    3300254: stone_w 12
+    3300256: stone_w 13
+    3300258: stone_w 14
+    3300260: stone_w 15
+    3300262: stone_w 16
+    3300264: stone_w 17
+    3300266: stone_w 18
+    3300268: stone_w 19
+    3300270: stone_w 2
+    3300272: stone_w 20
+    3300274: stone_w 21
+    3300276: stone_w 22
+    3300278: stone_w 23
+    3300280: stone_w 24
+    3300282: stone_w 25
+    3300284: stone_w 26
+    3300286: stone_w 27
+    3300288: stone_w 28
+    3300290: stone_w 29
+    3300292: stone_w 3
+    3300294: stone_w 30
+    3300296: stone_w 31
+    3300298: stone_w 32
+    3300300: stone_w 33
+    3300302: stone_w 34
+    3300304: stone_w 35
+    3300306: stone_w 36
+    3300308: stone_w 37
+    3300310: stone_w 38
+    3300312: stone_w 39
+    3300314: stone_w 4
+    3300316: stone_w 40
+    3300318: stone_w 41
+    3300320: stone_w 42
+    3300322: stone_w 43
+    3300324: stone_w 44
+    3300326: stone_w 45
+    3300328: stone_w 46
+    3300330: stone_w 47
+    3300332: stone_w 48
+    3300334: stone_w 49
+    3300336: stone_w 5
+    3300338: stone_w 50
+    3300340: stone_w 51
+    3300342: stone_w 52
+    3300344: stone_w 53
+    3300346: stone_w 54
+    3300348: stone_w 55
+    3300350: stone_w 56
+    3300352: stone_w 57
+    3300354: stone_w 58
+    3300356: stone_w 59
+    3300358: stone_w 6
+    3300360: stone_w 60
+    3300362: stone_w 61
+    3300364: stone_w 62
+    3300366: stone_w 63
+    3300368: stone_w 64
+    3300370: stone_w 65
+    3300372: stone_w 66
+    3300374: stone_w 67
+    3300376: stone_w 68
+    3300378: stone_w 69
+    3300380: stone_w 7
+    3300382: stone_w 70
+    3300384: stone_w 71
+    3300386: stone_w 72
+    3300388: stone_w 73
+    3300390: stone_w 74
+    3300392: stone_w 75
+    3300394: stone_w 76
+    3300396: stone_w 77
+    3300398: stone_w 78
+    3300400: stone_w 79
+    3300402: stone_w 8
+    3300404: stone_w 80
+    3300406: stone_w 81
+    3300408: stone_w 82
+    3300410: stone_w 83
+    3300412: stone_w 84
+    3300414: stone_w 85
+    3300416: stone_w 86
+    3300418: stone_w 87
+    3300420: stone_w 88
+    3300422: stone_w 89
+    3300424: stone_w 9
+    3300426: stone_w 90
+    3300428: stone_w 91
+    3300430: stone_w 92
+    3300432: stone_w 93
+    3300434: stone_w 94
+    3300436: stone_w 95
+    3300438: stone_w 96
+    3300440: stone_w 97
+    3300442: stone_w 98
+    3300444: stone_w 99
+    4300000: Mesh stone_w
+    4300002: Mesh stone_b
+    4300004: Mesh carpet
+    4300006: Mesh go_ban
+    4300008: Mesh Legs
+    4300010: Mesh bowl_b
+    4300012: Mesh lit_b
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
