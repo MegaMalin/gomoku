@@ -37,8 +37,8 @@ public class GameStartCameraFunc : MonoBehaviour {
 	public void endAnim()
 	{
 		_rm._gameCanvas.enabled = false;
-		GameObject.Find ("WindZone").GetComponent<WindZone> ().windTurbulence = 10;
-		GameObject.Find ("Camera").GetComponent<Camera> ().backgroundColor = Color.red;
+		GameObject.Find ("WindZone").GetComponent<WindZone> ().windTurbulence = 8;
+	//	GameObject.Find ("Camera").GetComponent<Camera> ().backgroundColor = Color.red;
 		_rm._mainMusic.Stop ();
 	}
 }

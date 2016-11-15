@@ -18,6 +18,8 @@ public class Apis : MonoBehaviour
 	public int playNumber;
 
 	private GameManager _gm;
+	private ResourcesManager _rm;
+	private AudioSource soundsAudioSource;
 
 	void Start ()
 	{
@@ -28,6 +30,10 @@ public class Apis : MonoBehaviour
 	{
 		if (!_gm)
 			_gm = GameObject.Find ("GameManager").GetComponent<GameManager> ();
+		if (!_rm)
+			_rm = GameObject.Find ("ResourcesManager").GetComponent<ResourcesManager> ();
+		if (!soundsAudioSource)
+			soundsAudioSource = GameObject.Find ("SoundsSource1").GetComponent<AudioSource> ();
 	}
 
 	IEnumerator coroutineConnect(String url)
@@ -149,6 +155,7 @@ public class Apis : MonoBehaviour
 				objectHit.GetComponent<Intersection> ().pon = (GameObject)Instantiate (_gm.blackPon, objectHit.position, objectHit.rotation);
 				_gm._rm._logsText.text = "Tour du joueur blanc";
 			}
+			_rm.playerPonPosedSound ();
 			_gm.turnNbr++;
 			_gm.endTurn ();
 			Debug.Log ("Win : " + result["win"].b);

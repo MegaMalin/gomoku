@@ -9,7 +9,19 @@ public class ResourcesManager : MonoBehaviour {
 	public Slider _musicSlider;
 	public AudioSource _mainMusic, _audioSounds;
 	public Scrollbar _scrollBar;
-	public AudioClip _yoooClip, _explosionSound;
-	public GameObject _doors,  _pons, gameManager;
+	public AudioClip _yoooClip, _explosionSound, ponPosedSound, guiClickedSound;
+	public GameObject _doors,  _pons, gameManager, SFXponPosed;
 	public Text player1PonsEatenText, player2PonsEatenText, _logsText, _scrollBarText;
+
+	public void playerPonPosedSound()
+	{
+		_audioSounds.clip = ponPosedSound;
+		_audioSounds.Play ();
+	}
+
+	public void guiClickSound()
+	{
+		_audioSounds.clip = guiClickedSound;
+		_audioSounds.Play ();
+	}
 }

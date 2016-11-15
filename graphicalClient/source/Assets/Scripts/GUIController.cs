@@ -37,17 +37,22 @@ public class GUIController : MonoBehaviour {
 		}
 	}
 
-	public void switchCanvas()
+	public void switchCanvas(Canvas c1, Canvas c2)
 	{
-		if (_rm._mainCanvas.enabled == true) {
-			_rm._mainCanvas.enabled = false;
-			_rm._optionsCanvas.enabled = true;
+		if (c1.enabled == true) {
+			c1.enabled = false;
+			c2.enabled = true;
 		} 
 		else
 		{
-			_rm._optionsCanvas.enabled = false;
-			_rm._mainCanvas.enabled = true;
+			c2.enabled = false;
+			c1.enabled = true;
 		}
+	}
+
+	public void menuToOption()
+	{
+		switchCanvas (_rm._mainCanvas, _rm._optionsCanvas);
 	}
 
 	public void StartPVP()
@@ -57,6 +62,8 @@ public class GUIController : MonoBehaviour {
 
 	IEnumerator startGame()
 	{
+		_rm.guiClickSound ();
+		yield return new WaitForSeconds (_rm.guiClickedSound.length);
 		_rm._pons.SetActive(false);
 		_rm._mainCanvas.enabled = false;
 		_rm._camera.GetComponent<Animator> ().SetTrigger ("Stop");

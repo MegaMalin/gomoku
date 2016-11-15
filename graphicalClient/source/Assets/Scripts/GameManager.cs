@@ -61,12 +61,14 @@ public class GameManager : MonoBehaviour {
             Transform objectHit = hit.transform;
 			if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection>().pon == null && player1.playNumber == player1.turnPlayer)
 			{
+				StartCoroutine (ponPosedAnim(objectHit));
 				player1.play ((int)objectHit.GetComponent<Intersection>().boardPos.x, (int)objectHit.GetComponent<Intersection>().boardPos.y, objectHit);
 				//objectHit.GetComponent<Intersection>().pon = (GameObject)Instantiate(whitePon, objectHit.position, objectHit.rotation);
 				//_rm._logsText.text = "Tour du joueur noir";
 			}
 			else if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection>().pon == null  && player2.playNumber == player2.turnPlayer)
 			{
+				StartCoroutine (ponPosedAnim(objectHit));
 				player2.play ((int)objectHit.GetComponent<Intersection>().boardPos.x, (int)objectHit.GetComponent<Intersection>().boardPos.y, objectHit);
 				//objectHit.gameObject.GetComponent<Intersection>().pon = (GameObject)Instantiate(blackPon, objectHit.position, objectHit.rotation);
 				//_rm._logsText.text = "Tour du joueur blanc";
@@ -74,6 +76,13 @@ public class GameManager : MonoBehaviour {
         }
 	}
 
+
+	IEnumerator ponPosedAnim(Transform objectHit)
+	{
+		GameObject go =  (GameObject)Instantiate (_rm.SFXponPosed, objectHit.position, objectHit.rotation);
+		Destroy (go, 0.3f);
+		yield return new WaitForSeconds(0.1f);
+	}
 	/*
 	public void rightClick()
 	{
