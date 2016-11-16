@@ -18,23 +18,7 @@ failure :
 
 ----------
 
-#### Returns the player linked to the key
-
-**POST /key**
-
-success :
-
-* code : `200`
-
-* result : `{player:INT}`
-
-failure :
-
-* bad key : `403` : {error: STRING}
-
-----------
-
-#### Returns the connection status for both players. A ame can only start when both players are connected
+#### Returns the connection status for both players. A game can only start when both players are connected
 
 
 **GET /connected**
@@ -47,6 +31,43 @@ success :
 
 
 ----------
+
+
+#### Returns the score for both players. A player wins when it gets to 10
+
+
+**GET /scores**
+
+success :
+
+* code : `200`
+
+* result : `{player1: INT, player2: INT}`
+
+
+----------
+
+#### Returns the score for the given player. A player wins when it gets to 10
+
+
+**GET /player_score**
+
+args :
+
+* key : STRING
+
+success :
+
+* code : `200`
+
+* result : `{score: INT}`
+
+failure :
+
+* Bad key : `401`
+
+----------
+
 
 #### Returns the map as a double array ordered this way : `map[y][x]` containing:
 
@@ -88,7 +109,7 @@ Makes a move. Needs the API key of the player in order to succeed.
 Also need the position where to play
 
 
-**POST /play**
+**POST (or GET) /play**
 
 args :
 
@@ -111,12 +132,13 @@ failure :
 
 ----------
 
-HTTP long polling request:
+##### HTTP long polling request
+
 Will be resolved when it is the player's turn to play
 Needs the API key of the player in order to succeed.
 
 
-**GET /subscribe/turn**
+**GET (or POST) /subscribe/turn**
 
 args :
 
@@ -137,12 +159,13 @@ failure :
 
 ----------
 
-HTTP long polling request:
+##### HTTP long polling request
+
 Will be resolved when the game is ready
 Needs the API key of the player in order to succeed.
 
 
-**GET /subscribe/ready**
+**GET (or POST) /subscribe/ready**
 
 args :
 
@@ -155,3 +178,29 @@ success :
 failure :
 
 * No key : `401`
+
+----------
+
+#### Asks to restart the game. If both players ask within a 10 seconds time range, the game restarts
+
+##### WARNING : If the game restart, both players are ejected from the game and need to reconnect
+
+##### HTTP long polling request
+
+Will be resolved when the other player accepted, or after a timeout of 10s
+
+**GET (or POST) /restart**
+
+args :
+
+* key : STRING
+
+success :
+
+* code : `200`
+
+* result : `{restarted: BOOLEAN}`
+
+failure :
+
+* Bad key : `401`

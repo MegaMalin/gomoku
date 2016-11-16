@@ -1,3 +1,7 @@
+'use strict';
+
+var Game = require('./game')
+
 function getRequestField(req, field) {
 	if (req.body && req.body[field] !== undefined)
 		return req.body[field];
@@ -11,15 +15,36 @@ function getRequestField(req, field) {
 	return undefined;
 }
 
-function api (app, game) {
+function api (app) {
+
+	var game = new Game()
 	var self = this;
 	self.keys = {};
 
-	app.get('/', function (req, res) {
-	  res.send('Welcome to the gomoku game');
-	});
+	// routes
+	app.get('/', api_root);
+	app.get('/connect', api_connect);
+	app.get('/connected', api_connected);
+	app.post('/key', api_key);
+	app.get('/map', api_map);
+	app.get('/turn', api_turn);
+	app.get('/play', api_play);
+	app.post('/play', api_play);
+	app.get('/scores', api_score);
+	app.get('/player_score', api_player_score);
+	app.get('/subscribe/ready', api_subscribe_ready);
+	app.post('/subscribe/ready', api_subscribe_ready);
+	app.get('/subscribe/turn', api_subscribe_turn);
+	app.post('/subscribe/turn', api_subscribe_turn);
+	app.get('/restart', api_restart);
+	app.post('/restart', api_restart);
 
-	app.get('/connect', function (req, res) {
+
+	function api_root (req, res) {
+	  res.send('Welcome to the gomoku game');
+	}
+
+	function api_connect (req, res) {
 		var player = game.connectPlayer();
 		if (player > 0) {
 			var key = generateKey();
@@ -28,30 +53,52 @@ function api (app, game) {
 		}
 		else
 			res.status(403).send();
-	});
+	}
 
-	app.get('/connected', function (req, res) {
+	function api_connected (req, res) {
 		res.status(200).send(game.getConnectedPlayers());
-	});
+	}
 
-	app.post('/key', function (req, res) {
+	function api_key (req, res) {
 		var key = getRequestField(req, 'key');
 		var player = self._getPlayerFromKey(key);
 		if (player === 1 || player === 2)
 			res.status(200).send({player: player});
 		else
 			res.status(403).send({error: 'Bad key'});
-	});
+	}
 
-	app.get('/map', function (req, res) {
+	function api_map (req, res) {
 		res.status(200).send(game.getMap());
-	});
+	}
 
-	app.get('/turn', function (req, res) {
+	function api_turn (req, res) {
 		res.status(200).send(game.getTurn());
-	});
+	}
 
-	app.post('/play', function (req, res) {
+	function api_score (req, res) {
+		res.status(200).send(game.getScore());
+	}
+
+	function api_player_score (req, res) {
+		var key = getRequestField(req, 'key');
+
+		if (!key)
+			res.status(401).send({error: 'Bad player'});
+		else {
+			var player = self._getPlayerFromKey(key);
+			if (player !== 1 && player !== 2)
+				res.status(401).send({error: 'Bad player'});
+			else {
+				res.status(200).send({
+					score: game.getScore()[['player1', 'player2'][player - 1]]
+				});
+			}
+		}
+	}
+
+
+	function api_play (req, res) {
 		var key = getRequestField(req, 'key');
 		try {
 			var position = JSON.parse(getRequestField(req, 'position'));
@@ -75,9 +122,27 @@ function api (app, game) {
 		}
 		else
 			res.status(403).send({error: 'Bad position'});
-	});
+	}
 
-	app.get('/subscribe/turn', function (req, res) {
+	function api_subscribe_ready (req, res) {
+		res.set('Cache-Control', 'no-cache, must-revalidate');
+
+		var key = getRequestField(req, 'key');
+
+		var player = self._getPlayerFromKey(key);
+		if (player !== 1 && player !== 2)
+			res.status(401).send();
+
+		if (game.isReady()) {
+			res.status(200).send();
+		}
+
+		game.once('ready', () => {
+			res.status(200).send();
+		});
+	}
+
+	function api_subscribe_turn (req, res) {
 		res.set('Cache-Control', 'no-cache, must-revalidate');
 		var key = getRequestField(req, 'key');
 
@@ -102,25 +167,20 @@ function api (app, game) {
 		}
 		subscribe();
 
-	});
+	}
 
-	app.get('/subscribe/ready', function (req, res) {
+	function api_restart(req, res) {
 		res.set('Cache-Control', 'no-cache, must-revalidate');
-
 		var key = getRequestField(req, 'key');
 
 		var player = self._getPlayerFromKey(key);
 		if (player !== 1 && player !== 2)
 			res.status(401).send();
 
-		if (game.isReady()) {
-			res.status(200).send();
-		}
-
-		game.once('ready', () => {
-			res.status(200).send();
-		});
-	});
+		game = new Game();
+		self.keys = {};
+		res.status(200).send({restarted: true})
+	}
 
 	self._getPlayerFromKey = function(key) {
 		return self.keys[key];
