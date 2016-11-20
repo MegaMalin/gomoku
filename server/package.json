@@ -4,7 +4,8 @@
   "description": "A gomoku web server",
   "main": "server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "test-game": "./node_modules/.bin/mocha test/game.js"
   },
   "repository": {
     "type": "git",
