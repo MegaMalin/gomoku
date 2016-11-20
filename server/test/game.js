@@ -126,5 +126,291 @@ describe('referee', function() {
                 done();
             });
         });
+        describe('checkWin', function() {
+            it('should return true if score == 10', function(done) {
+                game.score[1] = 10;
+                expect(game.checkWin({x: 0, y: 0}, 1, []).win).to.equal(true);
+                done();
+            });
+            it('should return true if 5 stones aligned', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][18] = 1;
+                game.map[1][17] = 1;
+                game.map[2][16] = 1;
+                game.map[3][15] = 1;
+                expect(game.checkWin({x: 14, y: 4}, 1, []).win).to.equal(true);
+                done();
+            });
+        });
+    });
+
+    describe('take stones', function() {
+        describe('takeNorth', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][0] = 1;
+                game.map[1][0] = 2;
+                game.map[2][0] = 2;
+                let taken = game.takeNorth({x: 0, y: 3}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(0);
+                expect(taken[0].y).to.equal(1);
+                expect(taken[1].x).to.equal(0);
+                expect(taken[1].y).to.equal(2);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][0] = 1;
+                game.map[1][0] = 2;
+                game.map[2][0] = 2;
+                let taken = game.takeNorth({x: 0, y: 3}, 2);
+                expect(taken[0].x).to.equal(0);
+                expect(taken[0].y).to.equal(1);
+                expect(taken[1].x).to.equal(0);
+                expect(taken[1].y).to.equal(2);
+                expect(game.map[1][0]).to.equal(0);
+                expect(game.map[2][0]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeSouth', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][0] = 2;
+                game.map[2][0] = 2;
+                game.map[3][0] = 1;
+                let taken = game.takeSouth({x: 0, y: 0}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(0);
+                expect(taken[0].y).to.equal(2);
+                expect(taken[1].x).to.equal(0);
+                expect(taken[1].y).to.equal(1);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][0] = 2;
+                game.map[2][0] = 2;
+                game.map[3][0] = 1;
+                let taken = game.takeSouth({x: 0, y: 0}, 2);
+                expect(taken[0].x).to.equal(0);
+                expect(taken[0].y).to.equal(2);
+                expect(taken[1].x).to.equal(0);
+                expect(taken[1].y).to.equal(1);
+                expect(game.map[1][0]).to.equal(0);
+                expect(game.map[2][0]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeWest', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][0] = 1;
+                game.map[0][1] = 2;
+                game.map[0][2] = 2;
+                let taken = game.takeWest({x: 3, y: 0}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(1);
+                expect(taken[0].y).to.equal(0);
+                expect(taken[1].x).to.equal(2);
+                expect(taken[1].y).to.equal(0);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][0] = 1;
+                game.map[0][1] = 2;
+                game.map[0][2] = 2;
+                let taken = game.takeWest({x: 3, y: 0}, 2);
+                expect(taken[0].x).to.equal(1);
+                expect(taken[0].y).to.equal(0);
+                expect(taken[1].x).to.equal(2);
+                expect(taken[1].y).to.equal(0);
+                expect(game.map[0][1]).to.equal(0);
+                expect(game.map[0][2]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeEast', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][1] = 2;
+                game.map[0][2] = 2;
+                game.map[0][3] = 1;
+                let taken = game.takeEast({x: 0, y: 0}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(2);
+                expect(taken[0].y).to.equal(0);
+                expect(taken[1].x).to.equal(1);
+                expect(taken[1].y).to.equal(0);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][1] = 2;
+                game.map[0][2] = 2;
+                game.map[0][3] = 1;
+                let taken = game.takeEast({x: 0, y: 0}, 2);
+                expect(taken[0].x).to.equal(2);
+                expect(taken[0].y).to.equal(0);
+                expect(taken[1].x).to.equal(1);
+                expect(taken[1].y).to.equal(0);
+                expect(game.map[0][1]).to.equal(0);
+                expect(game.map[0][2]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeNorthWest', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][0] = 1;
+                game.map[1][1] = 2;
+                game.map[2][2] = 2;
+                let taken = game.takeNorthWest({x: 3, y: 3}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(1);
+                expect(taken[0].y).to.equal(1);
+                expect(taken[1].x).to.equal(2);
+                expect(taken[1].y).to.equal(2);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][0] = 1;
+                game.map[1][1] = 2;
+                game.map[2][2] = 2;
+                let taken = game.takeNorthWest({x: 3, y: 3}, 2);
+                expect(taken[0].x).to.equal(1);
+                expect(taken[0].y).to.equal(1);
+                expect(taken[1].x).to.equal(2);
+                expect(taken[1].y).to.equal(2);
+                expect(game.map[1][1]).to.equal(0);
+                expect(game.map[2][2]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeNorthEast', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][18] = 1;
+                game.map[1][17] = 2;
+                game.map[2][16] = 2;
+                let taken = game.takeNorthEast({x: 15, y: 3}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(17);
+                expect(taken[0].y).to.equal(1);
+                expect(taken[1].x).to.equal(16);
+                expect(taken[1].y).to.equal(2);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][18] = 1;
+                game.map[1][17] = 2;
+                game.map[2][16] = 2;
+                let taken = game.takeNorthEast({x: 15, y: 3}, 2);
+                expect(taken[0].x).to.equal(17);
+                expect(taken[0].y).to.equal(1);
+                expect(taken[1].x).to.equal(16);
+                expect(taken[1].y).to.equal(2);
+                expect(game.map[1][17]).to.equal(0);
+                expect(game.map[2][18]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeSouthEast', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][1] = 2;
+                game.map[2][2] = 2;
+                game.map[3][3] = 1;
+                let taken = game.takeSouthEast({x: 0, y: 0}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(2);
+                expect(taken[0].y).to.equal(2);
+                expect(taken[1].x).to.equal(1);
+                expect(taken[1].y).to.equal(1);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][1] = 2;
+                game.map[2][2] = 2;
+                game.map[3][3] = 1;
+                let taken = game.takeSouthEast({x: 0, y: 0}, 2);
+                expect(taken[0].x).to.equal(2);
+                expect(taken[0].y).to.equal(2);
+                expect(taken[1].x).to.equal(1);
+                expect(taken[1].y).to.equal(1);
+                expect(game.map[1][1]).to.equal(0);
+                expect(game.map[2][2]).to.equal(0);
+                done();
+            });
+        });
+        describe('takeSouthWest', function() {
+            it('should take 2', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][17] = 2;
+                game.map[2][16] = 2;
+                game.map[3][15] = 1;
+                let taken = game.takeSouthWest({x: 18, y: 0}, 2);
+                expect(taken.length).to.equal(2);
+                expect(taken[0].x).to.equal(16);
+                expect(taken[0].y).to.equal(2);
+                expect(taken[1].x).to.equal(17);
+                expect(taken[1].y).to.equal(1);
+                done();
+            });
+            it('should take the right stones', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][17] = 2;
+                game.map[2][16] = 2;
+                game.map[3][15] = 1;
+                let taken = game.takeSouthWest({x: 18, y: 0}, 2);
+                expect(taken[0].x).to.equal(16);
+                expect(taken[0].y).to.equal(2);
+                expect(taken[1].x).to.equal(17);
+                expect(taken[1].y).to.equal(1);
+                expect(game.map[1][17]).to.equal(0);
+                expect(game.map[2][16]).to.equal(0);
+                done();
+            });
+        });
+        describe('checkTakeStone', function() {
+           it('sould return 2 stones taken', function(done) {
+               game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+               game.map[0][18] = 1;
+               game.map[1][17] = 2;
+               game.map[2][16] = 2;
+               let taken = game.takeNorthEast({x: 15, y: 3}, 2);
+               expect(taken.length).to.equal(2);
+               done();
+           });
+            it('sould return 4 stones taken', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][18] = 1;
+                game.map[1][17] = 2;
+                game.map[2][16] = 2;
+                game.map[3][15] = 2;
+                game.map[4][14] = 2;
+                let taken = game.takeNorthEast({x: 13, y: 5}, 4);
+                expect(taken.length).to.equal(4);
+                done();
+            });
+            it('sould return 6 stones taken', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][18] = 1;
+                game.map[1][17] = 2;
+                game.map[2][16] = 2;
+                game.map[3][15] = 2;
+                game.map[4][14] = 2;
+                game.map[5][13] = 2;
+                game.map[6][12] = 2;
+                let taken = game.takeNorthEast({x: 11, y: 7}, 6);
+                expect(taken.length).to.equal(6);
+                done();
+            });
+        });
     });
 });
