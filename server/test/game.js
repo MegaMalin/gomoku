@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var Game = require('../game.js');
 var game = new Game();
