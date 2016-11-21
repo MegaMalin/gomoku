@@ -6,12 +6,15 @@ node_js:
   - "5.0"
   - "6.0"
 
+before_install:
+- cd server
+
 install:
-- cd server && npm install
+- npm install
 
 script:
-- cd server && npm run test
-- cd server && npm run test-referee
+- npm run test
+- npm run test-referee
 
 notifications:
   webhooks:
