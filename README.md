@@ -1,9 +1,9 @@
 # gomoku
 An implementation of a gomoku game + AI
 
-travis-compatibility
+[![Build Status](https://travis-ci.org/4rzael/gomoku.svg?branch=master)](https://travis-ci.org/4rzael/gomoku)
 
-# tests
+# tests
 
 * run `npm run test` to start API unit tests
 
