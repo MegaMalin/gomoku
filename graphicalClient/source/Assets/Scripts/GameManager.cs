@@ -3,8 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour {
-
+public class GameManager : MonoBehaviour
+{
 	public Apis player1, player2;
 	public ResourcesManager _rm;
 	public GameObject whitePon, blackPon;
@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour {
 	private int tryConnect = 0;
 	public bool playable = true;
 
-	void Start () {
+	void Start ()
+	{
 		_rm = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
 		player1 = GameObject.Find ("Player1Api").GetComponent<Apis> ();
 		player2 = GameObject.Find ("Player2Api").GetComponent<Apis> ();
@@ -51,20 +52,16 @@ public class GameManager : MonoBehaviour {
 		}
 
 		tryConnect++;
-		if (player1.playable == false)
+		if (player1.playable == false || player2.playable == false)
 		{
 			player1.connect ();
 			player1.connected ();
-			return false;
-		}
-		else if (player2.playable == false)
-		{
 			player2.connect ();
 			player2.connected ();
-			return false;
+			return (false);
 		}
-		else if (player1.key == "" || player2.key == "")
-			return false;
+		if (player1.key == "" || player2.key == "")
+			return (false);
 		tryConnect = 0;
 
 		//Check if players are in the same turn
@@ -139,6 +136,8 @@ public class GameManager : MonoBehaviour {
 
 	public void restartGame()
 	{
+		if (player1.playable == false || player2.playable == false)
+			return;
 		player1.restart ();
 		player2.restart ();
 		GameObject[] pons;
@@ -147,6 +146,9 @@ public class GameManager : MonoBehaviour {
             Destroy(pon);
         }
 		_rm._logsText.text = "Nouvelle partie !";
+		player1.playable = false;
+		player2.playable = false;
+		turnNbr = 1;
 	}
 
 	public void gameOver()
@@ -154,4 +156,3 @@ public class GameManager : MonoBehaviour {
 		GameObject.Find ("Camera").GetComponent<Animator> ().SetTrigger ("End");
 	}
 }
-
