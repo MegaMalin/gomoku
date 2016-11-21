@@ -20,6 +20,7 @@ public class Apis : MonoBehaviour
 	private GameManager _gm;
 	private ResourcesManager _rm;
 	private AudioSource soundsAudioSource;
+	private WWW www;
 
 	void Start ()
 	{
@@ -136,7 +137,7 @@ public class Apis : MonoBehaviour
 
 	IEnumerator coroutinePlay(String url, Transform objectHit)
 	{
-		WWW www = new WWW(url);
+		www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
 		if (www.error != null)
 		{
@@ -145,27 +146,29 @@ public class Apis : MonoBehaviour
 		else
 		{
 			JSONObject result = new JSONObject (www.text);
+			Debug.Log ("Win : " + result["win"].b);
 			if (playNumber == 1)
 			{
 				objectHit.GetComponent<Intersection> ().pon = (GameObject)Instantiate (_gm.whitePon, objectHit.position, objectHit.rotation);
-				_gm._rm._logsText.text = "Tour du joueur noir";
+				_rm._logsText.text = "Tour du joueur noir";
 			}
 			else if (playNumber == 2)
 			{
-				objectHit.GetComponent<Intersection> ().pon = (GameObject)Instantiate (_gm.blackPon, objectHit.position, objectHit.rotation);
-				_gm._rm._logsText.text = "Tour du joueur blanc";
+				objectHit.gameObject.GetComponent<Intersection>().pon = (GameObject)Instantiate(_gm.blackPon, objectHit.position, objectHit.rotation);
+				_rm._logsText.text = "Tour du joueur blanc";
 			}
-			_rm.playerPonPosedSound ();
 			_gm.turnNbr++;
-			_gm.endTurn ();
-			Debug.Log ("Win : " + result["win"].b);
+			_rm.playerPonPosedSound ();
 		}
+		_gm.playable = true;
 	}
 	
 	public void play(int x, int y, Transform objectHit)
 	{
 		if (playable == true)
+		{
 			StartCoroutine (coroutinePlay (url + "play" + "?key=" + key + "&position={\"x\":" + x + ",\"y\":" + y + "}", objectHit));
+		}
 		else
 			Debug.Log ("Error : The game is not started !");
 	}
@@ -240,6 +243,26 @@ public class Apis : MonoBehaviour
 			Debug.Log ("WWW Error /subscribe/ready: You d'ont have a key !");
 		else
 			StartCoroutine(coroutineSubscribeReady(url + "subscribe/ready&key=" + key));*/
+	}
+
+	IEnumerator coroutineRestart(String url)
+	{
+		WWW www = new WWW(url);
+		yield return new WaitForSeconds(0.1F);
+		if (www.error != null)
+		{
+			Debug.Log ("WWW Error /restart: " + www.error);
+		}
+		else
+		{
+			JSONObject result = new JSONObject (www.text);
+			Debug.Log ("Restart : " + (bool)result[0].b);
+		}
+	}
+
+	public void restart()
+	{
+		StartCoroutine (coroutineRestart(url + "restart" + "?key=" + key));
 	}
 }
 

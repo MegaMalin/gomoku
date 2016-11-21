@@ -5,39 +5,30 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
-	private Apis player1, player2;
+	public Apis player1, player2;
 	public ResourcesManager _rm;
-	public int player1Score, player2Score;
 	public GameObject whitePon, blackPon;
 	public List<Intersection> board = new List<Intersection>();
 	public int turnNbr = 1;
 	private int maxTryConnect = 15;
 	private int tryConnect = 0;
+	public bool playable = true;
 
 	void Start () {
 		_rm = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
-		player1Score = 0;
-		player2Score = 0;
 		player1 = GameObject.Find ("Player1Api").GetComponent<Apis> ();
 		player2 = GameObject.Find ("Player2Api").GetComponent<Apis> ();
 		player1.connect ();
 		player2.connect ();
 	}
 	
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+	void Update ()
+	{
+		if (Input.GetKeyDown (KeyCode.Space))
 			gameOver ();
-		}
-		if (tryConnect >= maxTryConnect)
-		{
-			_rm._logsText.text = "Erreur : connexion échouer avec le serveur.";
+		
+		if (!roundReady())
 			return;
-		}
-		if (!verifPlayable ()) {
-			Debug.Log ("Debug Update check");
-			return;
-		}
-		tryConnect = 0;
 
 		_rm.player1PonsEatenText.text = "Pions mangés : " + player1.score;
 		_rm.player2PonsEatenText.text = "Pions mangés : " + player2.score;
@@ -49,73 +40,16 @@ public class GameManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.R))
 			restartGame();
 	}
-		
-	public void leftClick()
-	{
-		player1.map ();
-		player2.map ();
-        RaycastHit hit;
-        Ray ray = GameObject.Find("Camera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-        
-        if (Physics.Raycast(ray, out hit)) {
-            Transform objectHit = hit.transform;
-			if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection>().pon == null && player1.playNumber == player1.turnPlayer)
-			{
-				StartCoroutine (ponPosedAnim(objectHit));
-				player1.play ((int)objectHit.GetComponent<Intersection>().boardPos.x, (int)objectHit.GetComponent<Intersection>().boardPos.y, objectHit);
-				//objectHit.GetComponent<Intersection>().pon = (GameObject)Instantiate(whitePon, objectHit.position, objectHit.rotation);
-				//_rm._logsText.text = "Tour du joueur noir";
-			}
-			else if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection>().pon == null  && player2.playNumber == player2.turnPlayer)
-			{
-				StartCoroutine (ponPosedAnim(objectHit));
-				player2.play ((int)objectHit.GetComponent<Intersection>().boardPos.x, (int)objectHit.GetComponent<Intersection>().boardPos.y, objectHit);
-				//objectHit.gameObject.GetComponent<Intersection>().pon = (GameObject)Instantiate(blackPon, objectHit.position, objectHit.rotation);
-				//_rm._logsText.text = "Tour du joueur blanc";
-			}
-        }
-	}
 
+	private bool roundReady()
+	{
+		//Check connection
+		if (tryConnect >= maxTryConnect)
+		{
+			_rm._logsText.text = "Erreur : connexion échouer avec le serveur.";
+			return (false);
+		}
 
-	IEnumerator ponPosedAnim(Transform objectHit)
-	{
-		GameObject go =  (GameObject)Instantiate (_rm.SFXponPosed, objectHit.position, objectHit.rotation);
-		Destroy (go, 0.3f);
-		yield return new WaitForSeconds(0.1f);
-	}
-	/*
-	public void rightClick()
-	{
-        RaycastHit hit;
-        Ray ray = GameObject.Find("Camera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-        
-        if (Physics.Raycast(ray, out hit)) {
-            Transform objectHit = hit.transform;
-         if (objectHit.GetComponent<Intersection>().pon != null)
-		 	Destroy(objectHit.GetComponent<Intersection>().pon);
-        }
-	}*/
-
-	public void restartGame()
-	{
-		GameObject[] pons;
-		pons = GameObject.FindGameObjectsWithTag("Pon");
-		  foreach (GameObject pon in pons) {
-            Destroy(pon);
-        }
-		player1Score = 0;
-		player2Score = 0;
-		_rm._logsText.text = "Nouvelle partie !";
-	}
-
-	public void gameOver()
-	{
-		GameObject.Find ("Camera").GetComponent<Animator> ().SetTrigger ("End");
-	}
-			
-	private bool verifPlayable()
-	{
-		Debug.Log ("tryConn = " + tryConnect);
 		tryConnect++;
 		if (player1.playable == false)
 		{
@@ -131,20 +65,93 @@ public class GameManager : MonoBehaviour {
 		}
 		else if (player1.key == "" || player2.key == "")
 			return false;
+		tryConnect = 0;
+
+		//Check if players are in the same turn
+		if (player1.turnTotal != turnNbr || player2.turnTotal != turnNbr)
+		{
+			endTurn ();
+			return (false);
+		}
+
 		return (true);
 	}
 
-	public void endTurn()
+	public void leftClick()
 	{
-		for (int i = 0; i < 15; i++)
+		if (playable == false)
+			return;
+		playable = false;
+        RaycastHit hit;
+        Ray ray = GameObject.Find("Camera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        
+        if (Physics.Raycast(ray, out hit))
 		{
-			player1.map ();
-			player2.map ();
-			player1.playerScore ();
-			player2.playerScore ();
-			player1.turn ();
-			player2.turn ();
-		}
+            Transform objectHit = hit.transform;
+			if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection> ().pon == null && player1.playNumber == player1.turnPlayer)
+			{
+				StartCoroutine (ponPosedAnim (objectHit));
+				player1.play ((int)objectHit.GetComponent<Intersection> ().boardPos.x, (int)objectHit.GetComponent<Intersection> ().boardPos.y, objectHit);
+				//objectHit.GetComponent<Intersection>().pon = (GameObject)Instantiate(whitePon, objectHit.position, objectHit.rotation);
+				//_rm._logsText.text = "Tour du joueur noir";
+			}
+			else if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection> ().pon == null && player2.playNumber == player2.turnPlayer)
+			{
+				StartCoroutine (ponPosedAnim (objectHit));
+				player2.play ((int)objectHit.GetComponent<Intersection> ().boardPos.x, (int)objectHit.GetComponent<Intersection> ().boardPos.y, objectHit);
+				//objectHit.gameObject.GetComponent<Intersection>().pon = (GameObject)Instantiate(blackPon, objectHit.position, objectHit.rotation);
+				//_rm._logsText.text = "Tour du joueur blanc";
+			}
+			else
+				playable = true;
+        }
+	}
+
+	private void endTurn()
+	{
+		player1.map ();
+		player2.map ();
+		player1.playerScore ();
+		player2.playerScore ();
+		player1.turn ();
+		player2.turn ();
+	}
+
+	IEnumerator ponPosedAnim(Transform objectHit)
+	{
+		GameObject go =  (GameObject)Instantiate (_rm.SFXponPosed, objectHit.position, objectHit.rotation);
+		Destroy (go, 0.3f);
+		yield return new WaitForSeconds(0.1f);
+	}
+
+	/*
+	public void rightClick()
+	{
+        RaycastHit hit;
+        Ray ray = GameObject.Find("Camera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        
+        if (Physics.Raycast(ray, out hit)) {
+            Transform objectHit = hit.transform;
+         if (objectHit.GetComponent<Intersection>().pon != null)
+		 	Destroy(objectHit.GetComponent<Intersection>().pon);
+        }
+	}*/
+
+	public void restartGame()
+	{
+		player1.restart ();
+		player2.restart ();
+		GameObject[] pons;
+		pons = GameObject.FindGameObjectsWithTag("Pon");
+		  foreach (GameObject pon in pons) {
+            Destroy(pon);
+        }
+		_rm._logsText.text = "Nouvelle partie !";
+	}
+
+	public void gameOver()
+	{
+		GameObject.Find ("Camera").GetComponent<Animator> ().SetTrigger ("End");
 	}
 }
 
