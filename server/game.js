@@ -264,64 +264,72 @@ function Game () {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x, y: pos.y - 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y - 1][pos.x] = 0;
+		return self.takeNorth({x: pos.x, y: pos.y - 1}, nbStones - 1)
+			.concat([{x: pos.x, y: pos.y - 1}]);
 	};
 
 	self.takeSouth = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x, y: pos.y + 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y + 1][pos.x] = 0;
+		return self.takeSouth({x: pos.x, y: pos.y + 1}, nbStones - 1)
+			.concat([{x: pos.x, y: pos.y + 1}]);
 	};
 
 	self.takeWest = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x - 1, y: pos.y}, nbStones - 1).concat([pos]);
+		self.map[pos.y][pos.x - 1] = 0;
+		return self.takeWest({x: pos.x - 1, y: pos.y}, nbStones - 1)
+			.concat([{x: pos.x - 1, y: pos.y}]);
 	};
 
 	self.takeEast = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x, y: pos.y + 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y][pos.x + 1] = 0;
+		return self.takeEast({x: pos.x + 1, y: pos.y}, nbStones - 1)
+			.concat([{x: pos.x + 1, y: pos.y}]);
 	};
 
 	self.takeNorthWest = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x - 1, y: pos.y - 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y - 1][pos.x - 1] = 0;
+		return self.takeNorthWest({x: pos.x - 1, y: pos.y - 1}, nbStones - 1)
+			.concat([{x: pos.x - 1, y: pos.y - 1}]);
 	};
 
 	self.takeNorthEast = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x + 1, y: pos.y - 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y - 1][pos.x + 1] = 0;
+		return self.takeNorthEast({x: pos.x + 1, y: pos.y - 1}, nbStones - 1)
+			.concat([{x: pos.x + 1, y: pos.y - 1}]);
 	};
 
 	self.takeSouthWest = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x - 1, y: pos.y + 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y + 1][pos.x - 1] = 0;
+		return self.takeSouthWest({x: pos.x - 1, y: pos.y + 1}, nbStones - 1)
+			.concat([{x: pos.x - 1, y: pos.y + 1}]);
 	};
 
 	self.takeSouthEast = function (pos, nbStones) {
 		if (nbStones === 0) {
 			return [];
 		}
-		self.map[pos.y][pos.x] = 0;
-		return self.takeNorth({x: pos.x + 1, y: pos.y + 1}, nbStones - 1).concat([pos]);
+		self.map[pos.y + 1][pos.x + 1] = 0;
+		return self.takeSouthEast({x: pos.x + 1, y: pos.y + 1}, nbStones - 1)
+			.concat([{x: pos.x + 1, y: pos.y + 1}]);
 	};
 }
 
