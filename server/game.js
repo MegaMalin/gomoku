@@ -70,7 +70,7 @@ function Game () {
 				reject({error: 'There already is a stone there'});
 			else {
 				self.map[y][x] = player;
-				taken = self.checkTakeStone({x: x, y: y}, player);
+				taken = self.checkTakeStone({x: x, y: y}, (player === 1 ? 2 : 1));
 				++self.turn;
 				self.emit('turn', self.getTurn());
 				resolve(self.checkWin({x: x, y: y}, player, taken));
