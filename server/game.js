@@ -216,7 +216,7 @@ function Game () {
 		adjacentEnemyStones = self.checkEast(stonePos, player);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x + adjacentEnemyStones <= 18
-			&& self.map[stonePos.y][stonePos.x - adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y][stonePos.x + adjacentEnemyStones] === player) {
 			taken = taken.concat(self.takeEast(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
