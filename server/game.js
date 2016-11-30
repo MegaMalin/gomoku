@@ -70,7 +70,7 @@ function Game () {
 				reject({error: 'There already is a stone there'});
 			else {
 				self.map[y][x] = player;
-				taken = self.checkTakeStone({x: x, y: y}, (player === 1 ? 2 : 1));
+				taken = self.checkTakeStone({x: x, y: y}, player);
 				++self.turn;
 				self.emit('turn', self.getTurn());
 				resolve(self.checkWin({x: x, y: y}, player, taken));
@@ -188,71 +188,72 @@ function Game () {
 
 	self.checkTakeStone = function (stonePos, player) {
 		let taken = [];
+		const enemy = player === 1 ? 2 : 1;
 
-		let adjacentEnemyStones = self.checkNorth(stonePos, player);
+		let adjacentEnemyStones = self.checkNorth(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.y - adjacentEnemyStones >= 0
-			&& self.map[stonePos.y - adjacentEnemyStones][stonePos.x] === player) {
+			&& self.map[stonePos.y - (adjacentEnemyStones + 1)][stonePos.x] === player) {
 			taken = taken.concat(self.takeNorth(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkSouth(stonePos, player);
+		adjacentEnemyStones = self.checkSouth(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.y + adjacentEnemyStones <= 18
-			&& self.map[stonePos.y + adjacentEnemyStones][stonePos.x] === player) {
+			&& self.map[stonePos.y + (adjacentEnemyStones + 1)][stonePos.x] === player) {
 			taken = taken.concat(self.takeSouth(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkWest(stonePos, player);
+		adjacentEnemyStones = self.checkWest(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x - adjacentEnemyStones >= 0
-			&& self.map[stonePos.y][stonePos.x - adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y][stonePos.x - (adjacentEnemyStones + 1)] === player) {
 			taken = taken.concat(self.takeWest(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkEast(stonePos, player);
+		adjacentEnemyStones = self.checkEast(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x + adjacentEnemyStones <= 18
-			&& self.map[stonePos.y][stonePos.x + adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y][stonePos.x + (adjacentEnemyStones + 1)] === player) {
 			taken = taken.concat(self.takeEast(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkNorthWest(stonePos, player);
+		adjacentEnemyStones = self.checkNorthWest(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x - adjacentEnemyStones >= 0
 			&& stonePos.y - adjacentEnemyStones >= 0
-			&& self.map[stonePos.y - adjacentEnemyStones][stonePos.x - adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y - (adjacentEnemyStones + 1)][stonePos.x - (adjacentEnemyStones + 1)] === player) {
 			taken = taken.concat(self.takeNorthWest(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkNorthEast(stonePos, player);
+		adjacentEnemyStones = self.checkNorthEast(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x + adjacentEnemyStones <= 18
 			&& stonePos.y - adjacentEnemyStones >= 0
-			&& self.map[stonePos.y - adjacentEnemyStones][stonePos.x + adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y - (adjacentEnemyStones + 1)][stonePos.x + (adjacentEnemyStones + 1)] === player) {
 			taken = taken.concat(self.takeNorthEast(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkSouthWest(stonePos, player);
+		adjacentEnemyStones = self.checkSouthWest(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x - adjacentEnemyStones >= 0
 			&& stonePos.y + adjacentEnemyStones <= 18
-			&& self.map[stonePos.y + adjacentEnemyStones][stonePos.x - adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y + (adjacentEnemyStones + 1)][stonePos.x - (adjacentEnemyStones + 1)] === player) {
 			taken = taken.concat(self.takeSouthWest(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
 
-		adjacentEnemyStones = self.checkSouthEast(stonePos, player);
+		adjacentEnemyStones = self.checkSouthEast(stonePos, enemy);
 		if (adjacentEnemyStones > 0 && adjacentEnemyStones % 2 === 0
 			&& stonePos.x + adjacentEnemyStones <= 18
 			&& stonePos.y + adjacentEnemyStones <= 18
-			&& self.map[stonePos.y + adjacentEnemyStones][stonePos.x + adjacentEnemyStones] === player) {
+			&& self.map[stonePos.y + (adjacentEnemyStones + 1)][stonePos.x + (adjacentEnemyStones + 1)] === player) {
 			taken = taken.concat(self.takeSouthEast(stonePos, adjacentEnemyStones));
 			self.score[player] += adjacentEnemyStones;
 		}
