@@ -1,7 +1,7 @@
 # gomoku
 An implementation of a gomoku game + AI
 
-[![Build Status](https://travis-ci.org/4rzael/gomoku.svg?branch=master)](https://travis-ci.org/4rzael/gomoku)
+[![Build Status](https://travis-ci.org/MegaMalin/gomoku.svg?branch=master)](https://travis-ci.org/MegaMalin/gomoku)
 
 # tests
 
