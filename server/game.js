@@ -66,6 +66,8 @@ function Game () {
 				reject({error: 'Bad position'});
 			else if (player !== 1 && player !== 2)
 				reject({error: 'Bad player'});
+			else if (player !== self.getTurn().current)
+				reject({error: 'Bad turn'});
 			else if (self.map[y][x] !== 0)
 				reject({error: 'There already is a stone there'});
 			else {

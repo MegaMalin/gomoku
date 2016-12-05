@@ -18,6 +18,7 @@ function getRequestField(req, field) {
 function api (app) {
 
 	var game = new Game()
+	var gameToTryThingsOn = new Game()
 	var self = this;
 	self.keys = {};
 
@@ -38,6 +39,8 @@ function api (app) {
 	app.post('/subscribe/turn', api_subscribe_turn);
 	app.get('/restart', api_restart);
 	app.post('/restart', api_restart);
+	app.get('/would-play', api_would_play);
+	app.post('/would-play', api_would_play);
 
 
 	function api_root (req, res) {
@@ -97,6 +100,35 @@ function api (app) {
 		}
 	}
 
+	function api_would_play(req, res) {
+		var key = getRequestField(req, 'key');
+		try {
+			var position = JSON.parse(getRequestField(req, 'position'));
+		}
+		catch (e) {
+			var position = undefined;
+		}
+
+		var player = self._getPlayerFromKey(key);
+		if (player !== 1 && player !== 2)
+			res.status(401).send({error: 'Bad player'});
+
+		gameToTryThingsOn.map = game.map.map((arr) => {return arr.slice()});
+		gameToTryThingsOn.turn = game.turn;
+		gameToTryThingsOn.players = game.players;
+		gameToTryThingsOn.score = game.score;
+
+		return gameToTryThingsOn.play(position['x'], position['y'], player)
+		.then((result) => {
+			res.status(200).send(Object.assign(result, gameToTryThingsOn.getMap()));
+		})
+		.catch((error) => {
+			res.status(403).send(error);
+			if (error.stack)
+				console.log(error.stack)
+		});
+	}
+
 
 	function api_play (req, res) {
 		var key = getRequestField(req, 'key');
@@ -112,7 +144,7 @@ function api (app) {
 			res.status(401).send({error: 'Bad player'});
 		if (position && position['x'] !== undefined && position['y'] !== undefined) {
 			// play
-			game.play(position['x'], position['y'], player)
+			return game.play(position['x'], position['y'], player)
 			.then((result) => {
 				res.status(200).send(result);
 			})
