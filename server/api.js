@@ -41,6 +41,7 @@ function api (app) {
 	app.post('/restart', api_restart);
 	app.get('/would-play', api_would_play);
 	app.post('/would-play', api_would_play);
+	app.get('/won', api_won);
 
 
 	function api_root (req, res) {
@@ -211,7 +212,11 @@ function api (app) {
 
 		game = new Game();
 		self.keys = {};
-		res.status(200).send({restarted: true})
+		res.status(200).send({restarted: true});
+	}
+
+	function api_won(req, res) {
+		res.status(200).send({won: game.win});
 	}
 
 	self._getPlayerFromKey = function(key) {

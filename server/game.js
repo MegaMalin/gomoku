@@ -12,6 +12,7 @@ function Game () {
 	self.players = {1: false, 2: false};
 	self.score = {1: 0, 2: 0};
 	self.turn = 1;
+	self.win = 0;
 
 	self.connectPlayer = function connectPlayer() {
 		if (!self.players[1]) {
@@ -87,16 +88,26 @@ function Game () {
 
 	// TODO: add 5 breakable rule
 	self.checkWin = function (stonePos, player, taken) {
-		if (self.score[player] >= 10)
+		if (self.score[player] >= 10) {
+			self.win = player;
 			return {win: true, taken: taken};
-		else if (self.checkNorth(stonePos, player) + self.checkSouth(stonePos, player) >= 4)
+		}
+		else if (self.checkNorth(stonePos, player) + self.checkSouth(stonePos, player) >= 4) {
+			self.win = player;
 			return {win: true, taken: taken};
-		else if (self.checkWest(stonePos, player) + self.checkEast(stonePos, player) >= 4)
+		}
+		else if (self.checkWest(stonePos, player) + self.checkEast(stonePos, player) >= 4) {
+			self.win = player;
 			return {win: true, taken: taken};
-		else if (self.checkNorthWest(stonePos, player) + self.checkSouthEast(stonePos, player) >= 4)
+		}
+		else if (self.checkNorthWest(stonePos, player) + self.checkSouthEast(stonePos, player) >= 4) {
+			self.win = player;
 			return {win: true, taken: taken};
-		else if (self.checkNorthEast(stonePos, player) + self.checkSouthWest(stonePos, player) >= 4)
+		}
+		else if (self.checkNorthEast(stonePos, player) + self.checkSouthWest(stonePos, player) >= 4) {
+			self.win = player;
 			return {win: true, taken: taken};
+		}
 		return {win: false, taken: taken};
 	};
 
