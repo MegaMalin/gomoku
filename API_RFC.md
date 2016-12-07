@@ -187,8 +187,6 @@ failure :
 
 ##### HTTP long polling request
 
-Will be resolved when the other player accepted, or after a timeout of 10s
-
 **GET (or POST) /restart**
 
 args :
