@@ -185,8 +185,6 @@ failure :
 
 ##### WARNING : If the game restart, both players are ejected from the game and need to reconnect
 
-##### HTTP long polling request
-
 **GET (or POST) /restart**
 
 args :
