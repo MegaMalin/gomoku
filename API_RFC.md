@@ -200,3 +200,19 @@ success :
 failure :
 
 * Bad key : `401`
+
+----------
+
+#### Return the current winner. 1 or 2 if a player won. Or 0 if there is no winner.
+
+**GET /won**
+
+success :
+
+* code : `200`
+
+* result : `{player:INT}`
+
+failure :
+
+* Full : `403`
