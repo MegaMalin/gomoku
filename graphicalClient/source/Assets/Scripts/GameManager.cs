@@ -2,157 +2,161 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
-{
-	public Apis player1, player2;
+public class GameManager : MonoBehaviour {
+
+	public GameObject Player1;
+
+	public AudioSource _as;
 	public ResourcesManager _rm;
-	public GameObject whitePon, blackPon;
-	public List<Intersection> board = new List<Intersection>();
-	public int turnNbr = 1;
-	private int maxTryConnect = 15;
-	private int tryConnect = 0;
-	public bool playable = true;
 
-	void Start ()
-	{
-		_rm = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
-		player1 = GameObject.Find ("Player1Api").GetComponent<Apis> ();
-		player2 = GameObject.Find ("Player2Api").GetComponent<Apis> ();
-		player1.connect ();
-		player2.connect ();
+	public int player1Score, player2Score = 0;
+	public GameObject whitePon, blackPon;
+	public bool gameIsOver = false;
+	[SerializeField] float gameOverDelay = 0.0f;
+
+	// Network API
+	public NetworkApi network;
+	public int playersTurn = 1;
+	public int turnTotal = 0;
+	public bool gameIsReady = false;
+	public int winnerID = 0;
+	[SerializeField] float turnTryDelay = 0.0f;
+	[SerializeField] float scoreUpdateRate = 0.0f;
+
+	// MAP
+	public List<Intersection> board = new List<Intersection>();
+	public int[,] map;
+	[SerializeField] float mapDelay = 0f;
+
+	void Start () {
+		map = new int[19,19];
+		_rm = GameObject.Find ("ResourcesManager").GetComponent<ResourcesManager> ();
+		_as = GetComponent<AudioSource> ();
+		network = GameObject.Find ("Network").GetComponent<NetworkApi>();
 	}
 	
-	void Update ()
-	{
-		if (Input.GetKeyDown (KeyCode.Space))
+	void Update () {
+		if (Input.GetKeyDown (KeyCode.R))
+			restartGame ();
+		if (winnerID > 0 && !gameIsOver && gameOverDelay < Time.time) {
+			gameOverDelay = Time.time + 1f;
+			gameIsOver = true;
 			gameOver ();
+		}
+		if (!gameIsReady) {
+			network.connected (this);
+			return;
+		}
 		
-		if (!roundReady())
-			return;
-
-		_rm.player1PonsEatenText.text = "Pions mangés : " + player1.score;
-		_rm.player2PonsEatenText.text = "Pions mangés : " + player2.score;
-
-		if (Input.GetButtonDown("Fire1"))
-			leftClick();
-	/*	if (Input.GetButtonDown("Fire2"))
-			rightClick();*/
-		if (Input.GetKeyDown(KeyCode.R))
-			restartGame();
+		if (mapDelay < Time.time) {
+			mapDelay = Time.time + 0.1f;
+			network.map (this);
+			network.won (this);
+			updateMap ();
+		}
+		if (turnTryDelay < Time.time) {
+			turnTryDelay = Time.time + 0.5f;
+			network.turn (this);
+		}
+		if (scoreUpdateRate < Time.time) {
+			scoreUpdateRate = Time.time + 0.5f;
+			network.getPlayersScore (this);
+		}
+		_rm.player1PonsEatenText.text = "Pions mangés : " + player1Score;
+		_rm.player2PonsEatenText.text = "Pions mangés : " + player2Score;
 	}
 
-	private bool roundReady()
+	public Intersection findPonWithPos(int x, int y)
 	{
-		//Check connection
-		if (tryConnect >= maxTryConnect)
+		for (int z = 0; z < board.Count; z++)
 		{
-			_rm._logsText.text = "Erreur : connexion échouer avec le serveur.";
-			return (false);
+			if (board [z].boardPos.x == x && board [z].boardPos.y == y)
+				return board [z];
 		}
-
-		tryConnect++;
-		if (player1.playable == false || player2.playable == false)
-		{
-			player1.connect ();
-			player1.connected ();
-			player2.connect ();
-			player2.connected ();
-			return (false);
-		}
-		if (player1.key == "" || player2.key == "")
-			return (false);
-		tryConnect = 0;
-
-		//Check if players are in the same turn
-		if (player1.turnTotal != turnNbr || player2.turnTotal != turnNbr)
-		{
-			endTurn ();
-			return (false);
-		}
-
-		return (true);
+		return null;
 	}
 
-	public void leftClick()
+	public void updateMap()
 	{
-		if (playable == false)
-			return;
-		playable = false;
-        RaycastHit hit;
-        Ray ray = GameObject.Find("Camera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-        
-        if (Physics.Raycast(ray, out hit))
+		for (int x = 0; x < 19; x++)
 		{
-            Transform objectHit = hit.transform;
-			if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection> ().pon == null && player1.playNumber == player1.turnPlayer)
-			{
-				StartCoroutine (ponPosedAnim (objectHit));
-				player1.play ((int)objectHit.GetComponent<Intersection> ().boardPos.x, (int)objectHit.GetComponent<Intersection> ().boardPos.y, objectHit);
-				//objectHit.GetComponent<Intersection>().pon = (GameObject)Instantiate(whitePon, objectHit.position, objectHit.rotation);
-				//_rm._logsText.text = "Tour du joueur noir";
+			for (int y = 0; y < 19; y++) {
+				Intersection tmp = findPonWithPos (x, y);
+				if (map [y,x] == 0 && tmp.pon != null)
+					destroyPon (tmp.pon);
+				if (map [y,x] == 1 && tmp.pon == null)
+					posePon(tmp, whitePon);
+				if (map [y,x] == 2 && tmp.pon == null)
+					posePon(tmp, blackPon);
 			}
-			else if (objectHit.tag == "PonPlace" && objectHit.GetComponent<Intersection> ().pon == null && player2.playNumber == player2.turnPlayer)
-			{
-				StartCoroutine (ponPosedAnim (objectHit));
-				player2.play ((int)objectHit.GetComponent<Intersection> ().boardPos.x, (int)objectHit.GetComponent<Intersection> ().boardPos.y, objectHit);
-				//objectHit.gameObject.GetComponent<Intersection>().pon = (GameObject)Instantiate(blackPon, objectHit.position, objectHit.rotation);
-				//_rm._logsText.text = "Tour du joueur blanc";
-			}
-			else
-				playable = true;
-        }
+		}
 	}
 
-	private void endTurn()
+	public void posePon(Intersection tmp, GameObject pon)
 	{
-		player1.map ();
-		player2.map ();
-		player1.playerScore ();
-		player2.playerScore ();
-		player1.turn ();
-		player2.turn ();
+		tmp.GetComponent<Intersection> ().pon = (GameObject)Instantiate (pon, tmp.transform.position, tmp.transform.rotation);
+		StartCoroutine(ponPosedAnim(tmp.transform));
 	}
 
 	IEnumerator ponPosedAnim(Transform objectHit)
 	{
-		GameObject go =  (GameObject)Instantiate (_rm.SFXponPosed, objectHit.position, objectHit.rotation);
-		Destroy (go, 0.3f);
+		GameObject go =  (GameObject)Instantiate (_rm.SFXponPosed, objectHit.position + new Vector3(0, 0.005f, 0), objectHit.rotation);
+		Destroy (go, 3);
 		yield return new WaitForSeconds(0.1f);
 	}
 
-	/*
-	public void rightClick()
-	{
-        RaycastHit hit;
-        Ray ray = GameObject.Find("Camera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-        
-        if (Physics.Raycast(ray, out hit)) {
-            Transform objectHit = hit.transform;
-         if (objectHit.GetComponent<Intersection>().pon != null)
-		 	Destroy(objectHit.GetComponent<Intersection>().pon);
-        }
-	}*/
-
-	public void restartGame()
-	{
-		if (player1.playable == false || player2.playable == false)
-			return;
-		player1.restart ();
-		player2.restart ();
-		GameObject[] pons;
-		pons = GameObject.FindGameObjectsWithTag("Pon");
-		  foreach (GameObject pon in pons) {
-            Destroy(pon);
-        }
-		_rm._logsText.text = "Nouvelle partie !";
-		player1.playable = false;
-		player2.playable = false;
-		turnNbr = 1;
-	}
 
 	public void gameOver()
 	{
+		// TO DO : Display winner's ID on GUI
 		GameObject.Find ("Camera").GetComponent<Animator> ().SetTrigger ("End");
+	}
+
+	public void destroyPonWithPos(int x, int y)
+	{
+		for (int i = 0; i < board.Count; i++) {
+			if (board [i].boardPos.x == x && board [i].boardPos.y == y) {
+				destroyPon (board [i].pon);
+			}
+		}
+	}
+
+	public void destroyPon(GameObject pon)
+	{
+		ResourcesManager tmp = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
+		_as.clip = tmp.ponDestroyedSound;
+		_as.Play ();
+		GameObject go =  (GameObject)Instantiate (tmp.SFXponDestroyed, pon.transform.position + new Vector3(0, 0.02f, 0), pon.transform.rotation);
+		Destroy (go, 5f);
+		Destroy (pon);
+	}
+
+	public void restartGame()
+	{
+		StartCoroutine (restartGameCoroutine ());
+	}
+
+	IEnumerator restartGameCoroutine()
+	{
+		string key = Player1.GetComponent<PlayerController> ().myNetworkKey;
+		yield return new WaitForSeconds (0.5f);
+		network.restart (key);
+		yield return new WaitForSeconds (0.5f);
+		SceneManager.LoadScene(0);
+	}
+
+	public void exitGame()
+	{
+		StartCoroutine (exitGameCoroutine ());
+	}
+		
+	IEnumerator exitGameCoroutine()
+	{
+		string key = Player1.GetComponent<PlayerController> ().myNetworkKey;
+		network.restart (key);
+		yield return new WaitForSeconds (0.5f);
+		Application.Quit ();
 	}
 }

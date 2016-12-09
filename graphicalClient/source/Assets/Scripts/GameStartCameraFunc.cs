@@ -27,6 +27,17 @@ public class GameStartCameraFunc : MonoBehaviour {
 		meteorStorm.SetActive (true);
 	}
 
+	public void desactivateVolcano1()
+	{
+		volcano1.SetActive (false);
+	}
+
+	public void desactivateVolcano2()
+	{
+		volcano2.SetActive (false);
+		meteorStorm.SetActive (false);
+	}
+
 	public void playExplosion()
 	{
 		_rm._audioSounds.clip = null;
@@ -36,9 +47,27 @@ public class GameStartCameraFunc : MonoBehaviour {
 
 	public void endAnim()
 	{
-		_rm._gameCanvas.enabled = false;
 		GameObject.Find ("WindZone").GetComponent<WindZone> ().windTurbulence = 8;
-	//	GameObject.Find ("Camera").GetComponent<Camera> ().backgroundColor = Color.red;
 		_rm._mainMusic.Stop ();
+	}
+
+	public void activateRestartCanvas()
+	{
+		_rm._restartCanvas.enabled = true;
+	}
+
+	public void desactivateRestartCanvas()
+	{
+		_rm._restartCanvas.enabled = false;
+	}
+
+	public void activateGameCanvas()
+	{
+		_rm._gameCanvas.enabled = true;
+	}
+
+	public void desactivateGameCanvas()
+	{
+		_rm._gameCanvas.enabled = false;
 	}
 }
