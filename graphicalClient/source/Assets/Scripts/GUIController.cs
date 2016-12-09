@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Diagnostics;
 
 public class GUIController : MonoBehaviour {
 
@@ -121,5 +122,12 @@ public class GUIController : MonoBehaviour {
 		_rm.gameManager.SetActive(true);
 		player1.SetActive (true);
 		player2.SetActive (true);
+	}
+
+	public void SetAiDifficulty(int lvl)
+	{
+		GameStartCameraFunc GC = GameObject.Find ("Camera").GetComponent<GameStartCameraFunc> ();
+		GC.aiDifficulty = lvl;
+		StartPVE ();
 	}
 }

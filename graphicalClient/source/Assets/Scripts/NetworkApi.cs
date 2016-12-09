@@ -60,13 +60,13 @@ public class NetworkApi : MonoBehaviour
 	{
 		WWW www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /win: " + www.error);
-		else
+		if (www.error != null){
+			//Debug.Log ("WWW Error /win: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
 			_gm.winnerID = (int)result [0].n;
-			Debug.Log ("Player " + _gm.winnerID.ToString () + " wins !");
+			//Debug.Log ("Player " + _gm.winnerID.ToString () + " wins !");
 		}	
 	}
 
@@ -74,15 +74,15 @@ public class NetworkApi : MonoBehaviour
 	{
 		WWW www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /connect: " + www.error);
-		else
+		if (www.error != null){
+			//Debug.Log ("WWW Error /connect: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
 			playerController.myBoardID = (int)result [0].n;
 			playerController.myNetworkKey = result [1].str;
 			playerController.connected = true;
-			Debug.Log ("Player number : " + playerController.myBoardID + " | Key : " + playerController.myNetworkKey);
+			//Debug.Log ("Player number : " + playerController.myBoardID + " | Key : " + playerController.myNetworkKey);
 		}
 	}
 
@@ -91,9 +91,9 @@ public class NetworkApi : MonoBehaviour
 	{
 		WWW www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /connected: " + www.error);
-		else
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /connected: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
 			if (result [0].b == true && result [1].b == true)
@@ -106,9 +106,9 @@ public class NetworkApi : MonoBehaviour
 	{
 		WWW www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /map: " + www.error);
-		else
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /map: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
 			string debug = "Map :\n";
@@ -121,7 +121,7 @@ public class NetworkApi : MonoBehaviour
 				}
 				debug += "\n";
 			}
-			Debug.Log (debug);
+			//Debug.Log (debug);
 		}
 	}
 
@@ -129,14 +129,14 @@ public class NetworkApi : MonoBehaviour
 	{
 		WWW www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /turn: " + www.error);
-		else
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /turn: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
 			_gm.playersTurn = (int)result[0].n;
 			_gm.turnTotal = (int)result[1].n;
-			Debug.Log ("Player turn : " + _gm.playersTurn + " | Turn total : " + _gm.turnTotal);
+			//Debug.Log ("Player turn : " + _gm.playersTurn + " | Turn total : " + _gm.turnTotal);
 		}
 	}
 
@@ -144,12 +144,12 @@ public class NetworkApi : MonoBehaviour
 	{
 		www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /play: " + www.error);
-		else
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /play: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
-			Debug.Log ("Win : " + result["win"].b + " - Taken : " + result["taken"]);
+			//Debug.Log ("Win : " + result["win"].b + " - Taken : " + result["taken"]);
 			yield return new WaitForSeconds (0.5f);
 		}
 	}
@@ -161,9 +161,9 @@ public class NetworkApi : MonoBehaviour
 		String urlTmp = url + "scores"; //Returns the score for both players.
 		WWW www = new WWW (urlTmp);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /subscribe/turn: " + www.error);
-		else
+		if (www.error != null){
+			//Debug.Log ("WWW Error /subscribe/turn: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
 			_gm.player1Score = (int)result[0].n;
@@ -175,12 +175,12 @@ public class NetworkApi : MonoBehaviour
 	{
 		WWW www = new WWW(url);
 		yield return new WaitForSeconds(0.1F);
-		if (www.error != null)
-			Debug.Log ("WWW Error /restart: " + www.error);
-		else
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /restart: " + www.error);
+		}else
 		{
 			JSONObject result = new JSONObject (www.text);
-			Debug.Log ("Restart : " + (bool)result[0].b);
+			//Debug.Log ("Restart : " + (bool)result[0].b);
 		}
 	}
 }

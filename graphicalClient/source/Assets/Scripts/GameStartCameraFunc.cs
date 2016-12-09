@@ -5,6 +5,7 @@ public class GameStartCameraFunc : MonoBehaviour {
 
 	public ResourcesManager _rm;
 	public GameObject volcano1, volcano2, meteorStorm;
+	public int aiDifficulty = 0;
 
 	void Start()
 	{
@@ -69,5 +70,18 @@ public class GameStartCameraFunc : MonoBehaviour {
 	public void desactivateGameCanvas()
 	{
 		_rm._gameCanvas.enabled = false;
+	}
+		
+	public void startAi()
+	{
+		string path = Application.dataPath;
+		if (aiDifficulty == 1)
+			path = path.Replace ("/graphicalClient/source/Assets", "/ai/Executables/easy.exe");
+		if (aiDifficulty == 2)
+			path = path.Replace ("/graphicalClient/source/Assets", "/ai/Executables/medium.exe");
+		if (aiDifficulty == 3)
+			path = path.Replace ("/graphicalClient/source/Assets", "/ai/Executables/hard.exe");
+		System.Diagnostics.Process.Start(path);
+		GameObject.Find("GUIController").GetComponent<GUIController>().StartPVE ();
 	}
 }
