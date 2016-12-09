@@ -118,6 +118,7 @@ describe('api', function () {
 			request(app)
 			.post('/play')
 			.field('key', player2Key)
+			.field('position', JSON.stringify({x: 1, y: 1}))
 			.end(function (err, res) {
 				expect(res.status).to.equal(403);
 				done();
@@ -149,6 +150,33 @@ describe('api', function () {
 			});
 		});
 		
+	});
+
+	describe('/would-play', function (done) {
+		it('should work like play', function (done) {
+			request(app)
+			.post('/would-play')
+			.field('key', player2Key)
+			.field('position', JSON.stringify({x: 1, y: 1}))
+			.end(function (err, res) {
+				expect(res.status).to.equal(200);
+				expect(res).to.have.property('text');
+				done();
+			});
+		})
+
+		it('should not really play', function (done) {
+			request(app)
+			.post('/would-play')
+			.field('key', player2Key)
+			.field('position', JSON.stringify({x: 1, y: 1}))
+			.end(function (err, res) {
+				expect(res.status).to.equal(200);
+				expect(res).to.have.property('text');
+				done();
+			});
+		})
+
 	});
 
 	// player 2 turn. Tile 3/3 used

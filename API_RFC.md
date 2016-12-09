@@ -185,10 +185,6 @@ failure :
 
 ##### WARNING : If the game restart, both players are ejected from the game and need to reconnect
 
-##### HTTP long polling request
-
-Will be resolved when the other player accepted, or after a timeout of 10s
-
 **GET (or POST) /restart**
 
 args :
@@ -204,3 +200,19 @@ success :
 failure :
 
 * Bad key : `401`
+
+----------
+
+#### Return the current winner. 1 or 2 if a player won. Or 0 if there is no winner.
+
+**GET /won**
+
+success :
+
+* code : `200`
+
+* result : `{player:INT}`
+
+failure :
+
+* Full : `403`
