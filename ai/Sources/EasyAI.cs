@@ -41,8 +41,9 @@ public class EasyAI : MonoBehaviour {
 	public int playNumber;
 	public bool played = false;
 	public int player1Score, player2Score = 0;
-	[SerializeField] float scoreUpdateRate = 0.0f;
-	[SerializeField] float playRate = 0.0f;
+	private float scoreUpdateRate = 0.0f;
+	private float playRate = 0.0f;
+
 
 	public State state;
 
@@ -58,6 +59,11 @@ public class EasyAI : MonoBehaviour {
 
 	public List<PonPosition> newMap = new List<PonPosition>();
 	public List<PonPosition> tmpMap = new List<PonPosition>();
+
+	public void restartAI()
+	{
+		isConnected = false;
+	}
 
 	void Start ()
 	{
@@ -128,14 +134,20 @@ public class EasyAI : MonoBehaviour {
 	{
 		if (!played) {
 			played = true;
-			assignWeight ();
+			initMap ();
+			updateMap ();
 			tmpMap.Clear ();
-			int tmpW = getHeavier ();
+			assignWeight ();
+
+			//int tmpW = getHeavier ();
 			for (int z = 0; z < newMap.Count; z++) {
-				if ((int)newMap [z].weight == tmpW && (int)newMap [z].playerId == 0)
+				for (int r = 0;r < (int)newMap [z].weight;r++)
 					tmpMap.Add (newMap [z]);
+			//	if ((int)newMap [z].weight == tmpW)
+			//		tmpMap.Add (newMap [z]);
 			}
 			PonPosition ponToPlay = tmpMap [UnityEngine.Random.Range (0, tmpMap.Count)];
+			Debug.Log ((int)ponToPlay.pos.y + " / " + (int)ponToPlay.pos.x + "    case : " + findPonWithPos ((int)ponToPlay.pos.y, (int)ponToPlay.pos.x).playerId);
 			play ((int)ponToPlay.pos.y, (int)ponToPlay.pos.x);
 			played = false;
 		}
@@ -218,7 +230,6 @@ public class EasyAI : MonoBehaviour {
 			checkGoodPositions (newMap [z], 1);
 			checkDangerousPosition (newMap [z], 1);
 			checkDangerousPosition (newMap [z], 2);
-			checkGoodPositions (newMap [z], 1);
 			}
 		}
 	}
@@ -230,21 +241,21 @@ public class EasyAI : MonoBehaviour {
 		//###############################################
 		if ((int)pp.pos.y - 4 >= 0 && _map [(int)pp.pos.x, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 2] == id
 			&& (_map [(int)pp.pos.x, (int)pp.pos.y - 3] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 4] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.y - 4 >= 0 && _map [(int)pp.pos.x, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 2] == id
 			&& (_map [(int)pp.pos.x, (int)pp.pos.y - 3] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.y - 2 >= 0 && _map [(int)pp.pos.x, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 2] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 
 		if ((int)pp.pos.y + 4 <= 18 && _map [(int)pp.pos.x, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y + 2] == id
 			&& (_map [(int)pp.pos.x, (int)pp.pos.y + 3] == id && _map [(int)pp.pos.x, (int)pp.pos.y + 4] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.y + 4 <= 18 && _map [(int)pp.pos.x, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y + 2] == id
 			&& (_map [(int)pp.pos.x, (int)pp.pos.y + 3] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.y + 2 <= 18 && _map [(int)pp.pos.x, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y + 2] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 		
 
 		//###############################################
@@ -252,21 +263,21 @@ public class EasyAI : MonoBehaviour {
 		//###############################################
 		if ((int)pp.pos.x + 4 <=  18 && _map [(int)pp.pos.x + 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y] == id
 			&& (_map [(int)pp.pos.x + 3, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 4, (int)pp.pos.y] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.x + 4 <=  18 && _map [(int)pp.pos.x + 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y] == id
 			&& (_map [(int)pp.pos.x + 3, (int)pp.pos.y] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.x + 2 <=  18 && _map [(int)pp.pos.x + 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 
 		if ((int)pp.pos.x - 4 >= 0 && _map [(int)pp.pos.x - 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y] == id
 			&& (_map [(int)pp.pos.x - 3, (int)pp.pos.y] == id && _map [(int)pp.pos.x - 4, (int)pp.pos.y] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.x - 4 >= 0 && _map [(int)pp.pos.x - 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y] == id
 			&& (_map [(int)pp.pos.x - 3, (int)pp.pos.y] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.x - 2 >= 0 && _map [(int)pp.pos.x - 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 
 
 		//###############################################
@@ -275,83 +286,145 @@ public class EasyAI : MonoBehaviour {
 		if ((int)pp.pos.x - 4 >=  0 && (int)pp.pos.y - 4 >=  0 && 
 			_map [(int)pp.pos.x - 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y - 2] == id
 			&& (_map [(int)pp.pos.x - 3, (int)pp.pos.y - 3] == id && _map [(int)pp.pos.x - 4, (int)pp.pos.y - 4] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.x - 4 >=  0 && (int)pp.pos.y - 4 >=  0 && 
 			_map [(int)pp.pos.x - 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y - 2] == id
 			&& (_map [(int)pp.pos.x - 3, (int)pp.pos.y - 3] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.y - 2 >=  0 && 
 			_map [(int)pp.pos.x - 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y - 2] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 
 		if ((int)pp.pos.y + 4 <=  18 && (int)pp.pos.x + 4 <=  18 && 
 			_map [(int)pp.pos.x + 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y + 2] == id
 			&& (_map [(int)pp.pos.x + 3, (int)pp.pos.y + 3] == id && _map [(int)pp.pos.x + 4, (int)pp.pos.y + 4] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.y + 4 <=  18 && (int)pp.pos.x + 4 <=  18 && 
 			_map [(int)pp.pos.x + 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y + 2] == id
 			&& (_map [(int)pp.pos.x + 3, (int)pp.pos.y + 3] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.y + 2 <=  18 && (int)pp.pos.x + 2 <=  18 && 
 			_map [(int)pp.pos.x + 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y + 2] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 		
 		if ((int)pp.pos.y - 4 >=  0 && (int)pp.pos.x + 4 <=  18 && 
 			_map [(int)pp.pos.x + 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id
 			&& (_map [(int)pp.pos.x + 3, (int)pp.pos.y - 3] == id && _map [(int)pp.pos.x + 4, (int)pp.pos.y - 4] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.y - 4 >=  0 && (int)pp.pos.x + 4 <=  18 && 
 			_map [(int)pp.pos.x + 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id
 			&& (_map [(int)pp.pos.x + 3, (int)pp.pos.y - 3] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.y - 2 >=  0 && (int)pp.pos.x + 2 <=  18 && 
 			_map [(int)pp.pos.x + 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 
 		if ((int)pp.pos.x - 4 >=  0 && (int)pp.pos.y + 4 <=  18 && 
 			_map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y + 2] == id
 			&& (_map [(int)pp.pos.x - 3, (int)pp.pos.y + 3] == id && _map [(int)pp.pos.x - 4, (int)pp.pos.y + 4] == id))
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.x - 4 >=  0 && (int)pp.pos.y + 4 <=  18 && 
 			_map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y + 2] == id
 			&& (_map [(int)pp.pos.x - 3, (int)pp.pos.y + 3] == id))
-			pp.weight += 50;
+			pp.weight += 500;
 		else if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.y + 2 <=  18 && 
 			_map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y + 2] == id)
-			pp.weight += 25;
+			pp.weight += 250;
 	}
 
 	public void checkDangerousPosition(PonPosition pp, int id)
 	{
+	//###############################################
+	// Check XXOXX horizontal
+	//###############################################
 		if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.x + 2 <=  18
 			&& _map [(int)pp.pos.x - 1, (int)pp.pos.y ] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y] == id
 			&& _map [(int)pp.pos.x + 1, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y] == id)
-			pp.weight += 500;
+			pp.weight += 1000;
 
+	//###############################################
+	// Check XOXXX && XXXOX horizontal
+	//###############################################
+	if ((int)pp.pos.x - 1 >=  0 && (int)pp.pos.x + 3 <=  18
+		&& _map [(int)pp.pos.x - 1, (int)pp.pos.y ] == id && _map [(int)pp.pos.x + 1, (int)pp.pos.y] == id
+		&& _map [(int)pp.pos.x + 2, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 3, (int)pp.pos.y] == id)
+		pp.weight += 1000;
+
+	if ((int)pp.pos.x - 3 >=  0 && (int)pp.pos.x + 1 <=  18
+		&& _map [(int)pp.pos.x - 1, (int)pp.pos.y ] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y] == id
+		&& _map [(int)pp.pos.x - 3, (int)pp.pos.y] == id && _map [(int)pp.pos.x + 1, (int)pp.pos.y] == id)
+		pp.weight += 1000;
+
+
+	//###############################################
+	// Check XXOXX vertical
+	//###############################################
 		if ((int)pp.pos.y - 2 >=  0 && (int)pp.pos.y + 2 <=  18
 			&& _map [(int)pp.pos.x , (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x , (int)pp.pos.y + 2] == id
 			&& _map [(int)pp.pos.x, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 2] == id)
-			pp.weight += 500;
+			pp.weight += 1000;
 
+
+	//###############################################
+	// Check XOXXX && XXXOX vertical
+	//###############################################
+	if ((int)pp.pos.y - 1 >=  0 && (int)pp.pos.y + 3 <=  18
+		&& _map [(int)pp.pos.x , (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x , (int)pp.pos.y + 2] == id
+		&& _map [(int)pp.pos.x, (int)pp.pos.y + 3] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 1] == id)
+		pp.weight += 1000;
+
+	if ((int)pp.pos.y - 3 >=  0 && (int)pp.pos.y + 1 <=  18
+		&& _map [(int)pp.pos.x , (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x , (int)pp.pos.y - 1] == id
+		&& _map [(int)pp.pos.x, (int)pp.pos.y - 2] == id && _map [(int)pp.pos.x, (int)pp.pos.y - 3] == id)
+		pp.weight += 1000;
+
+
+	//###############################################
+	// Check XXOXX diagonal
+	//###############################################
 		if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.y - 2 >=  0 && (int)pp.pos.x + 2 <=  18 && (int)pp.pos.y + 2 <=  18
 			&& _map [(int)pp.pos.x - 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y - 2] == id
 			&& _map [(int)pp.pos.x + 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y + 2] == id)
-			pp.weight += 500;
+			pp.weight += 1000;
 		else if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.y - 2 >=  0 && (int)pp.pos.x + 2 <=  18 && (int)pp.pos.y + 2 <=  18
-			&& _map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id
-			&& _map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id)
-			pp.weight += 500;
+			&& _map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y + 2] == id
+			&& _map [(int)pp.pos.x + 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id)
+			pp.weight += 1000;
+
+
+
+	//###############################################
+	// Check XOXXX && XXXOX diagonal
+	//###############################################
+	if ((int)pp.pos.x - 1 >=  0 && (int)pp.pos.y - 1 >=  0 && (int)pp.pos.x + 3 <=  18 && (int)pp.pos.y + 3 <=  18
+		&& _map [(int)pp.pos.x - 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x + 1, (int)pp.pos.y + 1] == id
+		&& _map [(int)pp.pos.x + 2, (int)pp.pos.y + 2] == id && _map [(int)pp.pos.x + 3, (int)pp.pos.y + 3] == id)
+		pp.weight += 1000;
+	if ((int)pp.pos.x - 3 >=  0 && (int)pp.pos.y - 3 >=  0 && (int)pp.pos.x + 1 <=  18 && (int)pp.pos.y + 1 <=  18
+		&& _map [(int)pp.pos.x - 1, (int)pp.pos.y - 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y - 2] == id
+		&& _map [(int)pp.pos.x - 3, (int)pp.pos.y - 3] == id && _map [(int)pp.pos.x + 1, (int)pp.pos.y + 1] == id)
+		pp.weight += 1000;
+
+	if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.y - 2 >=  0 && (int)pp.pos.x + 2 <=  18 && (int)pp.pos.y + 2 <=  18
+		&& _map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x + 1, (int)pp.pos.y - 1] == id
+		&& _map [(int)pp.pos.x + 2, (int)pp.pos.y - 2] == id && _map [(int)pp.pos.x + 3, (int)pp.pos.y - 3] == id)
+		pp.weight += 1000;
+	if ((int)pp.pos.x - 2 >=  0 && (int)pp.pos.y - 2 >=  0 && (int)pp.pos.x + 2 <=  18 && (int)pp.pos.y + 2 <=  18
+		&& _map [(int)pp.pos.x - 1, (int)pp.pos.y + 1] == id && _map [(int)pp.pos.x - 2, (int)pp.pos.y + 2] == id
+		&& _map [(int)pp.pos.x - 3, (int)pp.pos.y + 3] == id && _map [(int)pp.pos.x + 1, (int)pp.pos.y - 1] == id)
+		pp.weight += 1000;
+
 	}
 
 	public void checkHorizontal(PonPosition pp, int id)
 	{
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.y - n >= 0 && _map [(int)pp.pos.x, (int)pp.pos.y - n] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.y + n <= 18 && _map [(int)pp.pos.x, (int)pp.pos.y + n] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 
 	}
@@ -360,11 +433,11 @@ public class EasyAI : MonoBehaviour {
 	{
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.x - n >= 0 && _map [(int)pp.pos.x - n, (int)pp.pos.y] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.x + n <= 18 && _map [(int)pp.pos.x + n, (int)pp.pos.y] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 	}
 
@@ -372,19 +445,19 @@ public class EasyAI : MonoBehaviour {
 	{
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.x - n >= 0 && (int)pp.pos.y - n >= 0 && _map [(int)pp.pos.x - n, (int)pp.pos.y - n] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.x + n <= 18 && (int)pp.pos.y + n <= 18 && _map [(int)pp.pos.x + n, (int)pp.pos.y + n] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.x - n >= 0 && (int)pp.pos.y + n <= 18 && _map [(int)pp.pos.x - n, (int)pp.pos.y + n] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 		for (int n = 1; n < 5; n++) {
 			if ((int)pp.pos.x + n <= 18 && (int)pp.pos.y - n >= 0 && _map [(int)pp.pos.x + n, (int)pp.pos.y - n] == id)
-				pp.weight += 4 - n;
+			pp.weight += 250 / (n + 1);
 		}
 	}
 

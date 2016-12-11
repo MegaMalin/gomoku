@@ -183,5 +183,43 @@ public class NetworkApi : MonoBehaviour
 			//Debug.Log ("Restart : " + (bool)result[0].b);
 		}
 	}
+
+	public void activateRules()
+	{
+		StartCoroutine (coroutineActivate (url + "options" + "?options={\"fiveBreakable\":1, \"threeDouble\":1}"));
+	}
+
+	public void desactivateRules()
+	{
+		StartCoroutine (coroutineDesactivate (url + "options" + "?options={\"fiveBreakable\":0, \"threeDouble\":0}"));
+	}
+
+	IEnumerator coroutineActivate(String url)
+	{
+		www = new WWW(url);
+		yield return new WaitForSeconds(0.1F);
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /play: " + www.error);
+		}else
+		{
+			JSONObject result = new JSONObject (www.text);
+			Debug.Log ("Win : " + result["win"].b + " - Taken : " + result["taken"]);
+			yield return new WaitForSeconds (0.5f);
+		}
+	}
+
+	IEnumerator coroutineDesactivate(String url)
+	{
+		www = new WWW(url);
+		yield return new WaitForSeconds(0.1F);
+		if (www.error != null) {
+			//Debug.Log ("WWW Error /play: " + www.error);
+		}else
+		{
+			JSONObject result = new JSONObject (www.text);
+			Debug.Log ("Win : " + result["win"].b + " - Taken : " + result["taken"]);
+			yield return new WaitForSeconds (0.5f);
+		}
+	}
 }
 

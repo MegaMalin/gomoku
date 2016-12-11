@@ -1,6 +1,6 @@
 'use strict';
 
-require('events').EventEmitter.prototype._maxListeners = 100;
+require('events').EventEmitter.prototype.setMaxListeners(10000);
 var express = require('express');
 var bodyParser = require('body-parser');
 var formidable = require('express-formidable');
@@ -19,7 +19,6 @@ var api = new Api(app)
 var listenPort = 3000
 if (argv.p && argv.p == argv.p % 0xFFFF)
 	listenPort = argv.p
-
 
 app.listen(listenPort, function () {
   console.log('Example app listening on port', listenPort);

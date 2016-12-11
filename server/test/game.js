@@ -144,6 +144,38 @@ describe('referee', function() {
                 done();
             });
         });
+        describe('checkWin 5 breakable rule', function() {
+            it('vertical should return false', function(done) {
+                game.score[1] = 0;
+                game.score[2] = 0;
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[0][5] = 1;
+                game.map[1][5] = 1;
+                game.map[2][5] = 1;
+                game.map[3][5] = 1;
+                game.map[4][5] = 1;
+
+                game.map[0][4] = 2;
+                game.map[0][6] = 1;
+                expect(game.checkWin({x: 5, y: 4}, 1, []).win).to.equal(false);
+                done();
+            });
+        });
+        describe('Double three rule', function() {
+            it ('sould return false', function(done) {
+                game.map = Array(19).fill(0).map(() => Array(19).fill(0));
+                game.map[1][1] = 1;
+                game.map[2][2] = 1;
+                game.map[4][5] = 1;
+                game.map[4][6] = 1;
+                try {
+                    game.play(4, 4, 1);
+                } catch (err) {
+                    expect(err.error).to.equal('Double three');
+                }
+                done();
+            });
+        });
     });
 
     describe('take stones', function() {

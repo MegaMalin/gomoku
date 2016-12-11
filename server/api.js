@@ -39,6 +39,7 @@ function api (app) {
 	app.post('/subscribe/turn', api_subscribe_turn);
 	app.get('/restart', api_restart);
 	app.post('/restart', api_restart);
+	app.get('/options', api_options);
 	app.get('/would-play', api_would_play);
 	app.post('/would-play', api_would_play);
 	app.get('/won', api_won);
@@ -119,15 +120,13 @@ function api (app) {
 		gameToTryThingsOn.players = game.players;
 		gameToTryThingsOn.score = game.score;
 
-		return gameToTryThingsOn.play(position['x'], position['y'], player)
-		.then((result) => {
-			res.status(200).send(Object.assign(result, gameToTryThingsOn.getMap()));
-		})
-		.catch((error) => {
-			res.status(403).send(error);
-			if (error.stack)
-				console.log(error.stack)
-		});
+        try {
+            let result = gameToTryThingsOn.play(position['x'], position['y'], player)
+            res.status(200).send(Object.assign(result, gameToTryThingsOn.getMap()));
+        } catch (err) {
+            console.log(err);
+            res.status(403).send(err);
+        }
 	}
 
 
@@ -145,13 +144,13 @@ function api (app) {
 			res.status(401).send({error: 'Bad player'});
 		if (position && position['x'] !== undefined && position['y'] !== undefined) {
 			// play
-			return game.play(position['x'], position['y'], player)
-			.then((result) => {
+			try {
+                let result = game.play(position['x'], position['y'], player)
 				res.status(200).send(result);
-			})
-			.catch((error) => {
-				res.status(403).send(error);
-			})			
+			} catch (err) {
+				console.log(err);
+				res.status(403).send(err);
+			}
 		}
 		else
 			res.status(403).send({error: 'Bad position'});
@@ -219,7 +218,25 @@ function api (app) {
 		res.status(200).send({won: game.win});
 	}
 
-	self._getPlayerFromKey = function(key) {
+    function api_options (req, res) {
+        try {
+            var options = JSON.parse(getRequestField(req, 'options'));
+        }
+        catch (e) {
+            var options = undefined;
+        }
+
+        if (!options || options.fiveBreakable === undefined || options.threeDouble === undefined) {
+        	res.status(403).send({error: 'Bad params'});
+		} else {
+        	res.status(200).send();
+        	game.setOptionalRules(options.fiveBreakable == 1, options.threeDouble == 1);
+		}
+    }
+
+	game.on('turn', console.log);
+
+    self._getPlayerFromKey = function(key) {
 		return self.keys[key];
 	}
 }
