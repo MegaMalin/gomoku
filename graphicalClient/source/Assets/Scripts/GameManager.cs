@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour {
 		}
 		
 		if (mapDelay < Time.time) {
-			mapDelay = Time.time + 0.1f;
+			mapDelay = Time.time + 0.5f;
 			network.map (this);
 			network.won (this);
 			updateMap ();

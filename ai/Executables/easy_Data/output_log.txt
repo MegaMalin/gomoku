@@ -14,16 +14,1066 @@ Platform assembly: C:\Users\huet_f\Desktop\gomoku\ai\Executables\easy_Data\Manag
 Loading C:\Users\huet_f\Desktop\gomoku\ai\Executables\easy_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\huet_f\Desktop\gomoku\ai\Executables\easy_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\huet_f\Desktop\gomoku\ai\Executables\easy_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.143 seconds
+- Completed reload, in  0.076 seconds
 Platform assembly: C:\Users\huet_f\Desktop\gomoku\ai\Executables\easy_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\huet_f\Desktop\gomoku\ai\Executables\easy_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.002401 ms
+UnloadTime: 0.962882 ms
 UnityException: WWW is not ready downloading yet
   at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutineConnected>c__Iterator1.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
   at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
   at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
  
@@ -1558,6 +2608,265 @@ UnityException: WWW is not ready downloading yet
 UnityException: WWW is not ready downloading yet
   at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
   at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutineMap>c__Iterator2.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutinePlay>c__Iterator4.MoveNext () [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnityException: WWW is not ready downloading yet
+  at UnityEngine.WWW.get_text () [0x00000] in <filename unknown>:0 
+  at EasyAI+<coroutineGetPlayersScore>c__Iterator6.MoveNext () [0x00000] in <filename unknown>:0 
   at UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
@@ -1584,4 +2893,4 @@ UnityException: WWW is not ready downloading yet
 (Filename:  Line: -1)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1b68 -> priority: 1 
+  Thread -> id: 4f88 -> priority: 1 
